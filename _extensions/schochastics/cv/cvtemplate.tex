@@ -1,0 +1,184 @@
+% =========================================================================== %
+%
+% DOCUMENT DEFINITION
+%
+% =========================================================================== %
+
+\documentclass[letterpaper,10pt,final]{moderncv}
+
+% =========================================================================== %
+%
+% RESUME THEME
+%
+% Color options:
+%     black, blue (default), burgundy, green, grey, orange, purple, red
+% Style options:
+%     casual (default), classic, banking, oldstyle, fancy
+%
+% =========================================================================== %
+
+\moderncvtheme[blue]{banking}
+
+% character encoding
+\usepackage[utf8]{inputenc}		
+% \usepackage[USenglish]{isodate}
+
+% Page margins and column widths
+\usepackage[margin=0.6in]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+\usepackage{etoolbox, changepage}
+\patchcmd{\makehead}% <cmd>
+  {0.8\textwidth}% <search>
+  {\linewidth}% <replace>
+  {}{}% <success><failure>
+\let\originalrecomputecvlengths\recomputecvlengths
+  \renewcommand*{\recomputecvlengths}{%
+    \originalrecomputecvlengths%
+      \setlength{\quotewidth}{0.94\textwidth}}
+%\recomputelengths
+\usepackage[none]{hyphenat}  % Prevents hyphenation
+\usepackage{setspace} % Line spacing, if desired
+\usepackage{graphicx} % For bars
+\usepackage{multicol} % Multiple columns
+\usepackage{enumitem} % Adjust bulleted list spacing (http://ctan.org/pkg/enumitem)
+
+% Page numbers
+\nopagenumbers{}
+%.   OR
+%\usepackage{lastpage}
+%\rfoot{\addressfont\itshape\textcolor{gray}{Grossi, page \thepage\ of \pageref{LastPage}}}
+
+% cventry spacing
+\newcommand{\cvspace}{0.6em}
+
+% Define tightlist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{8pt}\setlength{\parskip}{0pt}}
+
+% Alternative cvitem spacing
+\makeatletter
+\newcommand*{\mycvitem}[3][0.25em]{%
+  \@initializelength{\mydefwidth}\settowidth{\mydefwidth}{\hintstyle{#2} \hspace{5pt}}
+  \@initializelength{\myitawidth}\setlength{\myitawidth}{\maincolumnwidth-\separatorcolumnwidth-\mydefwidth}
+  \ifthenelse{\equal{#2}{}}{}{\hintstyle{#2} \hspace{5pt}}{\begin{minipage}[t]{\myitawidth}\raggedright #3\end{minipage}}% 
+  \par\addvspace{#1}}
+\makeatother
+
+% Exclude cover letter
+\newif\iflong
+\longtrue % switch to false in short version
+\newcommand{\coverLetter}[1]{\iflong #1\fi}
+
+
+% Header information
+\firstname{$author.firstname$}
+\familyname{$author.lastname$}
+$if(subtitle)$
+\title{$subtitle$}
+$endif$
+$if(contact.address)$
+\address{$contact.address.line1$}{$contact.address.line2$}
+$endif$
+$if(contact.phone)$
+\phone{$contact.phone$}
+$endif$
+$if(contact.email)$
+\email{$contact.email$}
+$endif$
+$if(contact.website)$
+\homepage{$contact.website$}
+$endif$
+$if(contact.linkedin)$
+\social[linkedin]{$contact.linkedin$}
+$endif$
+$if(contact.extracvinfo)$
+\extrainfo{$contact.extracvinfo$}
+$endif$
+
+\begin{document}
+
+\normalsize
+\makecvtitle
+
+\section{Education}
+$for(education.items)$
+$if(education.items.minor)$
+\mycvitem[\cvspace]{$education.items.date$}{\textbf{$education.items.degree$}, $education.items.major$, $education.items.institution$, $education.items.location$ \newline Minor in $education.items.minor$ | 
+\textit{$education.items.extra$}}
+$else$
+\mycvitem[\cvspace]{$education.items.date$}{\textbf{$education.items.degree$}, $education.items.major$, $education.items.institution$, $education.items.location$ \newline \textit{$education.items.extra$}}
+$endif$
+$endfor$
+
+\section{Professional Appointments}
+$for(experience.items)$
+$if(experience.items.extra)$
+\mycvitem[\cvspace]{$experience.items.dates$}{\textbf{$experience.items.role$} | $experience.items.extra$ \newline $experience.items.employer$, $experience.items.location$}
+$else$
+\mycvitem[\cvspace]{$experience.items.dates$}{\textbf{$experience.items.role$} \newline $experience.items.employer$, $experience.items.location$}
+$endif$
+$endfor$
+
+$if(research)$
+\section{Research}
+$for(research.items)$
+\mycvitem[\cvspace]{$research.items.date$}{$research.items.entry$}
+$endfor$
+$endif$
+
+$if(fundingawarded)$
+\section{Funding Procurement}
+$for(fundingawarded.items)$
+\mycvitem[\cvspace]{$fundingawarded.items.date$}{$fundingawarded.items.entry$}
+$endfor$
+$endif$
+
+$if(publications)$
+\section{Publications}
+$if(publications.peer-reviewed)$
+\subsection{Peer Reviewed Publications}
+\vspace*{0.25em}
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(publications.peer-reviewed.items)$
+\item $publications.peer-reviewed.items.paper$
+$endfor$
+\end{list}
+$endif$
+
+$if(publications.proceedings)$
+\subsection{Conference Proceedings}
+\vspace*{0.25em}
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(publications.proceedings.items)$
+\item $publications.proceedings.items.paper$
+$endfor$
+\end{list}
+$endif$
+
+$if(publications.tech-reports)$
+\subsection{Technical Reports (not peer reviewed)}
+\vspace*{0.25em}
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(publications.tech-reports.items)$
+\item $publications.tech-reports.items.paper$
+$endfor$
+\end{list}
+$endif$
+
+$if(publications.talks)$
+\subsection{Presentatins}
+\vspace*{0.25em}
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(publications.tech-reports.items)$
+\item $publications.tech-reports.items.paper$
+$endfor$
+\end{list}
+$endif$
+
+$endif$
+
+% --------------------------------------------------------------------------------------------------------- %
+
+%\end{onehalfspacing}
+\end{document}
+

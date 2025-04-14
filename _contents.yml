@@ -1,0 +1,86 @@
+title: John Doe
+subtitle: Underwater Basket Weaver
+author:
+  firstname: "John"
+  lastname: "Doe"
+contact:
+  address: 
+    line1: "NOAA Fisheries | Southeast Fisheries Science Center | Fisheries Assessment, Technology," 
+    line2: "and Engineering Support Division | Advanced Technology and Innovation Branch"
+  email: "emailaddress"
+  website: "personalwebsiteurl"
+  github: "GithubUsername"
+  linkedin: "linkedInUrlHandle"
+  orcid: "orcid"
+  researchgate: "ResearchGateUrlHandle"
+  extrainfo: "Anything else to highlight up front?"
+summary: "Optional paragraph summary of skills and experience"
+education:
+  items:
+    - degree: Bachelor of Arts
+      major: Underwater Basket Weaving
+      institution: University of Awesomeness
+      location: Anylocation, US
+      date: 2000
+      minor: SCUBA Diving
+      extra: Graduated top of my class of 1
+    - degree: Master of Arts
+      major: Upsidedown Underwater Basket Weaving
+      institution: University of Awesomeness
+      location: Anylocation, US
+      date: 2002
+skills:
+  ncol: 2 # How many columns should this list span?
+  items:
+    - skill: Basket weaving
+      years: 20+ yrs.
+      scale: 1
+    - skill: SCUBA
+      years: 15+ yrs.
+      scale: 0.7 
+    - skill: Underwater pottery
+      years: 10 yrs.
+      scale: 0.5 
+    - skill: Fish identification
+      years: 4 yrs.
+      scale: 0.2 
+  softskills: going with the flow
+experience:
+  items:
+    - role: Senior Basket Weaver III
+      employer: Underwater Basket Weavers of America
+      location: Pacific Ocean
+      extra: 2022 Employee of the Year
+      date: Jan 2010--present
+      details: |
+        * Design unique and custom baskets according to customers' needs
+        * Assemble ~100 made-to-order baskets underwater each year, with 105% 5-star ratings on our customer feedback portal.
+research:
+  items:
+    - entry: "Developing ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
+      date: 2029-2023
+awards:
+  items:
+    - award: Fellow, International Association of Underwater Basket Weavers (2012) 
+publications:
+  peer-reviewed:
+    items:
+      - paper: Paper 1
+      - paper: Paper 2
+      - paper: Paper 3
+  proceedings:
+    items:
+      - paper: Proceedings 1
+      - paper: Proceedings 2
+  tech-reports:
+    items:
+      - paper: Tech Report 1
+  talks:
+    items:
+      - paper: Talk 1
+      - paper: Talk 2
+      - paper: Poster 1
+fundingawarded:
+  items:
+    - entry: 'Basket Weaving Innovation Initiative ($100k) "Testing new biofriendly weaving material in underwater environments"'
+      date: 2019

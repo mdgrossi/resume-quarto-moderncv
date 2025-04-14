@@ -1,0 +1,12 @@
+website:
+  title: "My Name"
+  page-footer:
+    background: "#F8F8FF"
+    right: This page is built with [Quarto](https://quarto.org/).
+
+  navbar:
+    left:
+      - text: Github
+        href: https://github.com/
+      - text: Google
+        href: https://google.com

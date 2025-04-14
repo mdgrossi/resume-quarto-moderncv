@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "John Doe",
+    "section": "",
+    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
+  },
+  {
+    "objectID": "index.html#peer-reviewed-publications",
+    "href": "index.html#peer-reviewed-publications",
+    "title": "John Doe",
+    "section": "Peer Reviewed Publications",
+    "text": "Peer Reviewed Publications\n\nPaper 1\nPaper 2\nPaper 3"
+  },
+  {
+    "objectID": "index.html#conference-proceedings",
+    "href": "index.html#conference-proceedings",
+    "title": "John Doe",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\nProceedings 1\nProceedings 2"
+  },
+  {
+    "objectID": "index.html#technical-reports-not-peer-reviewed",
+    "href": "index.html#technical-reports-not-peer-reviewed",
+    "title": "John Doe",
+    "section": "Technical Reports (not peer reviewed)",
+    "text": "Technical Reports (not peer reviewed)\n\nTech Report 1"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "John Doe",
+    "section": "",
+    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
+  },
+  {
+    "objectID": "resume.html#peer-reviewed-publications",
+    "href": "resume.html#peer-reviewed-publications",
+    "title": "John Doe",
+    "section": "Peer Reviewed Publications",
+    "text": "Peer Reviewed Publications\n\nPaper 1\nPaper 2\nPaper 3"
+  },
+  {
+    "objectID": "resume.html#conference-proceedings",
+    "href": "resume.html#conference-proceedings",
+    "title": "John Doe",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\nProceedings 1\nProceedings 2"
+  },
+  {
+    "objectID": "resume.html#technical-reports-not-peer-reviewed",
+    "href": "resume.html#technical-reports-not-peer-reviewed",
+    "title": "John Doe",
+    "section": "Technical Reports (not peer reviewed)",
+    "text": "Technical Reports (not peer reviewed)\n\nTech Report 1"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "John Doe",
+    "section": "",
+    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
+  },
+  {
+    "objectID": "cv.html#peer-reviewed-publications",
+    "href": "cv.html#peer-reviewed-publications",
+    "title": "John Doe",
+    "section": "Peer Reviewed Publications",
+    "text": "Peer Reviewed Publications\nPaper 1\nPaper 2\nPaper 3"
+  },
+  {
+    "objectID": "cv.html#conference-proceedings",
+    "href": "cv.html#conference-proceedings",
+    "title": "John Doe",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\nProceedings 1\nProceedings 2"
+  },
+  {
+    "objectID": "cv.html#technical-reports-not-peer-reviewed",
+    "href": "cv.html#technical-reports-not-peer-reviewed",
+    "title": "John Doe",
+    "section": "Technical Reports (not peer reviewed)",
+    "text": "Technical Reports (not peer reviewed)\nTech Report 1"
+  },
+  {
+    "objectID": "cv.html#presentations-posters-and-contributed-abstracts",
+    "href": "cv.html#presentations-posters-and-contributed-abstracts",
+    "title": "John Doe",
+    "section": "Presentations, Posters, and Contributed Abstracts",
+    "text": "Presentations, Posters, and Contributed Abstracts\nTalk 1\nTalk 2\nPoster 1"
+  }
+]
