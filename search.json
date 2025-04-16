@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "John Doe",
+    "section": "",
+    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
+  },
+  {
+    "objectID": "resume.html#peer-reviewed-publications",
+    "href": "resume.html#peer-reviewed-publications",
+    "title": "John Doe",
+    "section": "Peer Reviewed Publications",
+    "text": "Peer Reviewed Publications\n\nPaper 1\nPaper 2\nPaper 3"
+  },
+  {
+    "objectID": "resume.html#conference-proceedings",
+    "href": "resume.html#conference-proceedings",
+    "title": "John Doe",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\nProceedings 1\nProceedings 2"
+  },
+  {
+    "objectID": "resume.html#technical-reports-not-peer-reviewed",
+    "href": "resume.html#technical-reports-not-peer-reviewed",
+    "title": "John Doe",
+    "section": "Technical Reports (not peer reviewed)",
+    "text": "Technical Reports (not peer reviewed)\n\nTech Report 1"
+  }
+]

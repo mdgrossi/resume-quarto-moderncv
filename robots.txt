@@ -1,0 +1,1 @@
+Sitemap: https://mdgrossi.github.io/resume-quarto-moderncv/sitemap.xml
