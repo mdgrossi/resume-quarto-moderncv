@@ -5,8 +5,8 @@ author:
   lastname: "Doe"
 contact:
   address: 
-    line1: "NOAA Fisheries | Southeast Fisheries Science Center | Fisheries Assessment, Technology," 
-    line2: "and Engineering Support Division | Advanced Technology and Innovation Branch"
+    line1: 123 Waterman Lane
+    line2: Anylocation, US
   email: "emailaddress"
   website: "personalwebsiteurl"
   github: "GithubUsername"
