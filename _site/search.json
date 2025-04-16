@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "John Doe",
+    "title": "resume-quarto-moderncv",
     "section": "",
-    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
+    "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè: for private sector positions\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ: for academic positions\nPreview site\npdf\ndocx"
   },
   {
     "objectID": "index.html#peer-reviewed-publications",
@@ -89,5 +89,12 @@
     "title": "John Doe",
     "section": "Presentations, Posters, and Contributed Abstracts",
     "text": "Presentations, Posters, and Contributed Abstracts\nTalk 1\nTalk 2\nPoster 1"
+  },
+  {
+    "objectID": "scripts/index.html",
+    "href": "scripts/index.html",
+    "title": "resume-quarto-moderncv",
+    "section": "",
+    "text": "Rèsumè\npdf\ndocx\n\n\nCurriculum vitæ\npdf\ndocx"
   }
 ]
