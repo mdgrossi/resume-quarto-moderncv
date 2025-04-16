@@ -1,0 +1,23 @@
+---
+format:
+  html:
+    css: style.css
+    toc: false
+title: resume-quarto-moderncv
+subtitle: "A limited implementation of the LaTeX moderncv package in Quarto for rending resumes in html, pdf, and docx formats"
+
+Resume: R&egrave;sum&egrave;
+resume: r&egrave;sum&egrave;
+CV: Curriculum vit&aelig;
+cv: curriculum vit&aelig;
+---
+
+### Click any of the following to preview samples of each {{< meta resume >}} and {{< meta cv >}} format.  
+
+<br>
+
+|             | Website | Portable Document Format | Microsoft Word |              |
+| :---------- | :-: | :-: | :-: | :----------: |
+| **{{< meta Resume >}}:** for private sector positions | [Preview site](resume.qmd) | [pdf](my-resume.pdf) | [docx](my-resume.docx) |  |
+| **{{< meta CV >}}:** for academic positions | [Preview site](cv.qmd) | [pdf](my-cv.pdf) | [docx](my-cv.docx) | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+
