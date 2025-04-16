@@ -81,15 +81,31 @@
 % Header information
 \firstname{$author.firstname$}
 \familyname{$author.lastname$}
+$if(subtitle)$
 \title{$subtitle$}
-% \address{$contact.address$}
-% \phone{$contact.phone$}
+$endif$
+$if(contact.address)$
+\address{$contact.address.line1$}{$contact.address.line2$}
+$endif$
+$if(contact.phone)$
+\phone{$contact.phone$}
+$endif$
+$if(contact.email)$
 \email{$contact.email$}
+$endif$
+$if(contact.website)$
 \homepage{$contact.website$}
+$endif$
+$if(contact.linkedin)$
 \social[linkedin]{$contact.linkedin$}
-\extrainfo{$contact.extrainfo$}
+$endif$
+$if(contact.extracvinfo)$
+\extrainfo{$contact.extracvinfo$}
+$endif$
 
+$if(summary)$
 \quote{\small{$summary$}}
+$endif$
 
 \begin{document}
 
