@@ -26,5 +26,12 @@
     "title": "John Doe",
     "section": "Technical Reports (not peer reviewed)",
     "text": "Technical Reports (not peer reviewed)\n\nTech Report 1"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "resume-quarto-moderncv",
+    "section": "",
+    "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè: for private sector positions\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ: for academic positions\nPreview site\npdf\ndocx"
   }
 ]
