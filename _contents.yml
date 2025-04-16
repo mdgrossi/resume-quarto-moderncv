@@ -7,6 +7,7 @@ contact:
   address: 
     line1: 123 Waterman Lane
     line2: Anylocation, US
+  phone: 555-123-4321
   email: "emailaddress"
   website: "personalwebsiteurl"
   github: "GithubUsername"
