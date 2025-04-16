@@ -3,4 +3,4 @@
 .devcontainer/
 *.fdb_latexmk
 README_files/
-
+scripts/__pycache__/
