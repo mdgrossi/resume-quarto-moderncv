@@ -182,7 +182,8 @@ def mdexperience(items):
         items[i-1]['details'] = items[i-1]['details'] + items[i]['details']
     items = [d for i,d in enumerate(items) if i not in ind]
 
-    for item in items:
+    newitems = items.copy()
+    for item in newitems:
         # Add missing elements as placeholders
         for k in ['role', 'employer', 'location', 'date', 'details']:
             if k not in item.keys():
@@ -245,10 +246,25 @@ def cvexperience(items):
         }
         Normally, this dictionary would be from the YAML front matter of a
         Quarto markdown file.
-    """    
+    """
+    
+    # Remove pdf page breaks
+    ind = [i for i,d in enumerate(items) if 'role' not in d.keys()]
+    for i in ind:
+        items[i-1]['details'] = items[i-1]['details'] + items[i]['details']
+    items = [d for i,d in enumerate(items) if i not in ind]
 
     table_start = '<table class = "mytable">\n<tbody>\n'
-    entries = "".join(f"<tr><td class='year'><b>{item['date']}</b></td><td><b>{item['role']}</b> | {item['extra']}<br>{item['employer']}, {item['location']}</td></tr>" for item in items)
+    entries = ""
+    for item in items:
+        if 'location' not in item.keys() and 'extra' not in item.keys():
+            entries += f"<tr><td class='year'><b>{item['date']}</b></td><td><b>{item['role']}</b><br>{item['employer']}</td></tr>"
+        elif 'location' not in item.keys():
+            entries += f"<tr><td class='year'><b>{item['date']}</b></td><td><b>{item['role']}</b> | {item['extra']}<br>{item['employer']}</td></tr>"
+        elif 'extra' not in item.keys():
+            entries += f"<tr><td class='year'><b>{item['date']}</b></td><td><b>{item['role']}</b><br>{item['employer']}, {item['location']}</td></tr>"
+        else:
+            entries += f"<tr><td class='year'><b>{item['date']}</b></td><td><b>{item['role']}</b> | {item['extra']}<br>{item['employer']}, {item['location']}</td></tr>"
     table_end = '</tbody>\n</table>\n'
     
     # Assemble table
