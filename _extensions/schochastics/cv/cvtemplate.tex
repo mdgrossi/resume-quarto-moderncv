@@ -85,11 +85,20 @@ $endif$
 $if(contact.email)$
 \email{$contact.email$}
 $endif$
+$if(contact.linkedin)$
+\social[linkedin]{$contact.linkedin$}
+$endif$
 $if(contact.website)$
 \homepage{$contact.website$}
 $endif$
-$if(contact.linkedin)$
-\social[linkedin]{$contact.linkedin$}
+$if(contact.github)$
+\social[github]{$contact.github$}
+$endif$
+$if(contact.orcid)$
+\social[orcid]{$contact.orcid$}
+$endif$
+$if(contact.researchgate)$
+\social[researchgate]{$contact.researchgate$}
 $endif$
 $if(contact.extracvinfo)$
 \extrainfo{$contact.extracvinfo$}
@@ -175,8 +184,8 @@ $if(publications.talks)$
 \subsection{Posters, Presentations, and Contributed Abstracts}
 \vspace*{0.25em}
 \begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
-$for(publications.tech-reports.items)$
-\item $publications.tech-reports.items.paper$
+$for(publications.talks.items)$
+\item $publications.talks.items.paper$
 $endfor$
 \end{list}
 $endif$
