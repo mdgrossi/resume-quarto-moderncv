@@ -112,10 +112,16 @@ $endfor$
 
 \section{Professional Appointments}
 $for(experience.items)$
+$if(experience.items.role)$
+$if(experience.items.location)$
 $if(experience.items.extra)$
-\mycvitem[\cvspace]{$experience.items.dates$}{\textbf{$experience.items.role$} | $experience.items.extra$ \newline $experience.items.employer$, $experience.items.location$}
+\mycvitem[\cvspace]{$experience.items.date$}{\textbf{$experience.items.role$} | $experience.items.extra$ \newline $experience.items.employer$, $experience.items.location$}
 $else$
-\mycvitem[\cvspace]{$experience.items.dates$}{\textbf{$experience.items.role$} \newline $experience.items.employer$, $experience.items.location$}
+\mycvitem[\cvspace]{$experience.items.date$}{\textbf{$experience.items.role$} \newline $experience.items.employer$, $experience.items.location$}
+$endif$
+$else$
+\mycvitem[\cvspace]{$experience.items.date$}{\textbf{$experience.items.role$} | $experience.items.extra$ \newline $experience.items.employer$}
+$endif$
 $endif$
 $endfor$
 
@@ -166,7 +172,7 @@ $endfor$
 $endif$
 
 $if(publications.talks)$
-\subsection{Presentatins}
+\subsection{Posters, Presentations, and Contributed Abstracts}
 \vspace*{0.25em}
 \begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
 $for(publications.tech-reports.items)$
