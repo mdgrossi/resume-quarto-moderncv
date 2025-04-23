@@ -20,8 +20,8 @@ R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. File customi
 
 ### Previews
 
-|     | Resume | CV    |
-|:---:| :-----------: | :----------: |
+|     | Resume       | CV           |
+|:---:| :----------: | :----------: |
 | **PDF**  | ![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg) | ![PDF CV](images/cv-pdf-preview.jpg) |
 | **HTML** | ![HTML r&#232;sum&#232;](images/resume-html-preview.jpg) | ![HTML CV](images/cv-html-preview.jpg) |
 
