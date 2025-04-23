@@ -26,20 +26,6 @@ R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. File customi
 | **HTML** | ![HTML r&#232;sum&#232;](images/resume-html-preview.jpg) | ![HTML CV](images/cv-html-preview.jpg) |
 
 
-![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg)
-
----
-
-![PDF CV](images/cv-pdf-preview.jpg)
-
----
-
-![HTML r&#232;sum&#232;](images/resume-html-preview.jpg)
-
----
-
-![HTML CV](images/cv-html-preview.jpg)
-
 ### Creating a R&egrave;sum&egrave; and CV
 
 R&egrave;sum&egrave; and CV content are provided in YAML format in `_content.yml`. Most of the variables are used in both the r&egrave;sum&egrave; and CV, streamlining the process of making two separate but related documents. However, some entries are unique to one or the other document. All are described below. All entries are strings unless otherwise noted.
