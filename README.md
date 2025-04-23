@@ -18,19 +18,27 @@ The `docx` version is intended to provide a quick and easy way to populate a Mic
 
 R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. File customizations can be made in `resume.qmd` and `cv.qmd`. Instructions are provided below.
 
-### Preview
+### Previews
 
-::: {#previews layout-nrow=2}
+|     | Resume | CV    |
+|:---:| :-----------: | :----------: |
+| **PDF**  | ![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg) | ![PDF CV](images/cv-pdf-preview.jpg) |
+| **HTML** | ![HTML r&#232;sum&#232;](images/resume-html-preview.jpg) | ![HTML CV](images/cv-html-preview.jpg) |
+
 
 ![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg)
 
+---
+
 ![PDF CV](images/cv-pdf-preview.jpg)
+
+---
 
 ![HTML r&#232;sum&#232;](images/resume-html-preview.jpg)
 
-![HTML CV](images/cv-html-preview.jpg)
+---
 
-:::
+![HTML CV](images/cv-html-preview.jpg)
 
 ### Creating a R&egrave;sum&egrave; and CV
 
