@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "John Doe",
+    "section": "",
+    "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè — for the private sector\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ — for academia\nPreview site\npdf\ndocx"
+  },
+  {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "John Doe",
@@ -26,13 +33,6 @@
     "title": "John Doe",
     "section": "Technical Reports (not peer reviewed)",
     "text": "Technical Reports (not peer reviewed)\n\nTech Report 1"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "John Doe",
-    "section": "",
-    "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè — for the private sector\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ — for academia\nPreview site\npdf\ndocx"
   },
   {
     "objectID": "cv.html",
