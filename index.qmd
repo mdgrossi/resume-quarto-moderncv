@@ -22,4 +22,4 @@ cv: curriculum vit&aelig;
 
 <br>
 
-#### Instructions for using this template can be found in the [repo README](README.html).
+#### Instructions for using this template can be found in the [repo README](https://github.com/mdgrossi/resume-quarto-moderncv).
