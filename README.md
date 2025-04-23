@@ -2,15 +2,8 @@
 
 ## Professional r&#232;sum&#232; and academic curriculum vit&aelig; easily generated in `pdf`, `html`, and `docx` formats
 
-
-> [!IMPORTANT]
-> FIND/REPLACE:
-> Resume -> R&egrave;sum&egrave;
-> resume -> r&egrave;sum&egrave;
-> cv -> curriculum vit&aelig;
-
 ### Overview
-This template can be used to easily create a professional private sector r&#232;sum&#232; and/or an academic cv (CV) in `pdf`, `html`, and `docx` formats using [Quarto](https://quarto.org/) and [Python](https://www.python.org/):
+This template can be used to easily create a professional private sector r&#232;sum&#232; and/or an academic curriculum vit&aelig; (CV) in `pdf`, `html`, and `docx` formats using [Quarto](https://quarto.org/) and [Python](https://www.python.org/):
 
 * [Quarto](https://quarto.org/docs/get-started/) (>= 1.6.42)
 * [Python](https://www.python.org/downloads/) (>= 3.9.6)
@@ -23,11 +16,25 @@ Credit and kudos to both authors, as well as all upstream template authors, none
 
 The `docx` version is intended to provide a quick and easy way to populate a Microsoft Word document with the same content for occasions when this file format is needed. While the `pdf` and `html` versions are properly and similarly formatted, the `docx` version requires considerable manual intervention after the file is created.
 
-Resume and CV content are entered in `_contents.yml`. File customizations can be made in `resume.qmd` and `cv.qmd`. Instructions are provided below.
+R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. File customizations can be made in `resume.qmd` and `cv.qmd`. Instructions are provided below.
 
-### Creating a Resume and CV
+### Preview
 
-Resume and CV content are provided in YAML format in `_content.yml`. Most of the variables are used in both the resume and CV, streamlining the process of making two separate but related documents. However, some entries are unique to one or the other document. All are described below. All entries are strings unless otherwise noted.
+::: {#resume-pdf layout-ncol=2 layout-nrow=2}
+
+![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg)
+
+![PDF CV](images/cv-pdf-preview.jpg)
+
+![HTML r&#232;sum&#232;](images/resume-html-preview.jpg)
+
+![HTML CV](images/cv-html-preview.jpg)
+
+:::
+
+### Creating a R&egrave;sum&egrave; and CV
+
+R&egrave;sum&egrave; and CV content are provided in YAML format in `_content.yml`. Most of the variables are used in both the r&egrave;sum&egrave; and CV, streamlining the process of making two separate but related documents. However, some entries are unique to one or the other document. All are described below. All entries are strings unless otherwise noted.
 
 #### Header Information
 
@@ -66,7 +73,7 @@ Note that your name needs to be provided *twice* in `_contents.yml`: to `title` 
 
 #### Contact Information
 
-Contact information for the top of the resume and CV are passed to the top level `content` key, as in `author` above:
+Contact information for the top of the r&egrave;sum&egrave; and CV are passed to the top level `content` key, as in `author` above:
 
 | Keyword       | Description                                   |
 | :------------ | :-------------------------------------------- |
@@ -77,8 +84,8 @@ Contact information for the top of the resume and CV are passed to the top level
 | `linkedin`    | Your [LinkedIn](https://www.linkedin.com/) handle only. Will generate the custom web URL directing to this user's public page. |
 | `orcid`       | Your [ORCID](https://orcid.org/) number only.  Will generate the custom web URL directing to this user's public page.|
 | `researchgate` | Your [ResearchGate](https://www.researchgate.net/) handle only.  Will generate the custom web URL directing to this user's public page. |
-| `extrainfo`   | Any other information to include at the top of the resume and CV? |
-: Contact info options for resumes and CVs. Omitted if empty or not passed.
+| `extrainfo`   | Any other information to include at the top of the r&egrave;sum&egrave; and CV? |
+: Contact info options for r&egrave;sum&egrave;s and CVs. Omitted if empty or not passed.
 
 A physical or mailing address can also be passed to the `contact` key. It is separated into `line1` and `line2` keys:
 
@@ -115,7 +122,7 @@ contact:
 
 #### Summary
 
-An optional professional summary for the resume can be passed to the top level `summary` key, if desired. This is usually a paragraph-like executive summary of the resume itself or used to highlight or emphasize key knowledge, skills, and abilities. Omit if not desired.
+An optional professional summary for the r&egrave;sum&egrave; can be passed to the top level `summary` key, if desired. This is usually a paragraph-like executive summary of the r&egrave;sum&egrave; itself or used to highlight or emphasize key knowledge, skills, and abilities. Omit if not desired.
 
 The summary does not appear in the CV.
 
@@ -149,7 +156,7 @@ education:
 
 #### Skills
 
-Technical skills are included in resumes only. They are displayed as a simple bulleted list for `html` and `docx` and as a table with status bar-like visualizations of overall competence in `pdf` rendering. They are provided as a list of `items`, as in `education` above, with the following entries:
+Technical skills are included in r&egrave;sum&egrave;s only. They are displayed as a simple bulleted list for `html` and `docx` and as a table with status bar-like visualizations of overall competence in `pdf` rendering. They are provided as a list of `items`, as in `education` above, with the following entries:
 
 | Keyword       | Description                                   |
 | :------------ | :-------------------------------------------- |
@@ -212,7 +219,7 @@ research:
 
 #### Awards
 
-The optional `awards` category is only used in resumes. Provide a list of `items` with keyword `award`.
+The optional `awards` category is only used in r&egrave;sum&egrave;s. Provide a list of `items` with keyword `award`.
 
 #### Funding Awards
 
@@ -233,13 +240,13 @@ publications:
 
 #### Miscellaneous
 
-The resume and CV file names are passed to `resumefilename` and `cvfilename`, respectively (do not include a file extension.) These are used to create hyperlinks to the `pdf` and `docx` files.
+The r&egrave;sum&egrave; and CV file names are passed to `resumefilename` and `cvfilename`, respectively (do not include a file extension.) These are used to create hyperlinks to the `pdf` and `docx` files.
 
 ### Customization
 
 #### Rendering `html` and `docx`
 
-Resume and CV renderings can be customized in `resume.qmd` and `cv.qmd` Quarto markdown files, respectively. The most important elements to modify are the `output-file` arguments in the front matter under `resume-pdf` and `docx` in `resume.qmd` to specify the name of the resume file the produced, and under `cv-pdf` and `docx` in `cv.qmd` to specify the name of the CV file to be produced.
+R&egrave;sum&egrave; and CV renderings can be customized in `resume.qmd` and `cv.qmd` Quarto markdown files, respectively. The most important elements to modify are the `output-file` arguments in the front matter under `resume-pdf` and `docx` in `resume.qmd` to specify the name of the r&egrave;sum&egrave; file the produced, and under `cv-pdf` and `docx` in `cv.qmd` to specify the name of the CV file to be produced.
 
 The body of these markdown files controls the `html` and `docx` renderings. One may wish to  add, remove, or rearrange sections to either document, or change header names. In addition, any social or web media omitted from the `contact` section in `_contents.yml` should be removed or commented out in these files to prevent errors during rendering if `html` and/or `docx` renderings are desired. The current version of this template does not handle these entries conditionally.
 
@@ -268,19 +275,23 @@ Some functions take additional arguments; these are summarized here but consult 
 | Function      | Arguments                 | Usage             |
 | :------------ | :------------------------ | :-----------------|
 | `mdlist`      | `items`: as described above <br> `bullets`: whether or not to include bullets in the list | Create a simple list of entries. Used for Awards and Publications. |
-| `mdskills`    | `items`: as described above <br> `ncols`: number of columns the skills table should be arranged in <br> `icons`: whether skills should be prefaced by an appropriate icon, if one is available for that skill (displayed in `html` rendering only) | Display skills in a resume, either as a table (`pdf`) or a bulleted list (`html` and `docx`) |
-| `mdeducation` | `items`: as described above <br> `abbrev`: whether or not to always abbreviate degree type | Create a formatted list of degrees for a resume |
-| `mdexperience`| `items`: as described above | Create a formatted list of professional experiences for a resume |
+| `mdskills`    | `items`: as described above <br> `ncols`: number of columns the skills table should be arranged in <br> `icons`: whether skills should be prefaced by an appropriate icon, if one is available for that skill (displayed in `html` rendering only) | Display skills in a r&egrave;sum&egrave;, either as a table (`pdf`) or a bulleted list (`html` and `docx`) |
+| `mdeducation` | `items`: as described above <br> `abbrev`: whether or not to always abbreviate degree type | Create a formatted list of degrees for a r&egrave;sum&egrave; |
+| `mdexperience`| `items`: as described above | Create a formatted list of professional experiences for a r&egrave;sum&egrave; |
 | `cventry`     | `items`: as described above | Create a list of CV entries prefaced by the date. Used for Research and Funding categories. |
 | `cvexperience` | `items`: as described above | Create a list of professional experiences prefaced by the date for a CV |
 | `cveducation` | `items`: as described above | Create a list of educational degrees prefaced by the date for a CV |
 
 #### Rendering `pdf`
 
-Customizing the `pdf` renderings is somewhat more involved, as it requires knowledge of LaTeX in addition to the Markdown described above. The `pdf` resume and CV renderings are templated in `_extensions/schochastics/resume/resumetemplate.tex` and `_extensions/schochastics/cv/cvtemplate.tex`, respectively. Sections can be added, removed, or rearranged in these files, as well as other more advanced customizations, if one knows what one is doing in LaTeX. The advanced user may also find the LaTeX ["moderncv" package documentation](https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/moderncv/manual/moderncv_userguide.pdf) helpful.
+Customizing the `pdf` renderings is somewhat more involved, as it requires knowledge of LaTeX in addition to the Markdown described above. The `pdf` r&egrave;sum&egrave; and CV renderings are templated in `_extensions/schochastics/resume/resumetemplate.tex` and `_extensions/schochastics/cv/cvtemplate.tex`, respectively. Sections can be added, removed, or rearranged in these files, as well as other more advanced customizations, if one knows what one is doing in LaTeX. The advanced user may also find the LaTeX ["moderncv" package documentation](https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/moderncv/manual/moderncv_userguide.pdf) helpful.
 
 ### Advanced
 
 As with all Quarto projects, additional modifications can be made in `_quarto.qmd`. This is only needed if one does not like the existing layout or functionality. Generally, this file does not need to be modified.
 
 In addition, a `_website.yml` file is included in case one wishes to convert the `html` rendering into a stand-alone website. Add this file to the `metadata-files` list in the front matter of `resume.qmd` and/or `cv.qmd` to add navigation bars on the top and left side as well as a footer at the bottom of each page.
+
+### Usage
+
+This repository is configured to publish the `html` renderings to GitHub Pages. This is updated automatically when changes are committed or pushed. The r&egrave;sum&egrave; and CV can be accessed from the landing page and linked to directly from other sites, if desired. Corresponding `pdf` and `docx` files can be downloaded from the `html` page.
