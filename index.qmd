@@ -22,4 +22,4 @@ cv: curriculum vit&aelig;
 
 <br>
 
-#### Instructions for using this template can be found in the [repo README](README.md).
+#### Instructions for using this template can be found in the [repo README](README.html).
