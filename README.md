@@ -10,17 +10,17 @@ This template can be used to easily create a professional private sector r&#232;
 
 The `pdf` version is a custom and limited Quarto implementation of the LaTeX [moderncv](https://ctan.org/pkg/moderncv) template. The implementation is inspired by and derived from the [modern2-cv](https://github.com/schochastics/modern2-cv) Quarto template by [schochastics](https://github.com/schochastics).
 
-The `html` rendering supports integration with a portfolio website. It is based upon [this quarto-resume](https://github.com/busemorose/resume_quarto) by user [busemorose](https://github.com/busemorose), but uses Python instead of R to format the content, mostly due to seemingly endless challenges installing R's flextable package.
+The `html` rendering supports integration with a portfolio website. It is based upon [this quarto-resume](https://github.com/busemorose/resume_quarto) by [busemorose](https://github.com/busemorose), but uses Python instead of R to format the content, mostly due to seemingly endless challenges installing R's flextable package.
 
 Credit and kudos to both authors, as well as all upstream template authors, none of whom I know personally. Thank you for your contributions to [open science](https://en.wikipedia.org/wiki/Open_science). This template serves to pay it forward.
 
 The `docx` version is intended to provide a quick and easy way to populate a Microsoft Word document with the same content for occasions when this file format is needed. While the `pdf` and `html` versions are properly and similarly formatted, the `docx` version requires considerable manual intervention after the file is created.
 
-R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. File customizations can be made in `resume.qmd` and `cv.qmd`. Instructions are provided below.
+R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. Layout and formatting customizations can be made in `resume.qmd` and `cv.qmd`. Instructions are provided below.
 
 ### Previews
 
-|     | Resume       | CV           |
+|     | R&egrave;sum&egrave;       | CV           |
 |:---:| :----------: | :----------: |
 | **PDF**  | ![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg) | ![PDF CV](images/cv-pdf-preview.jpg) |
 | **HTML** | ![HTML r&#232;sum&#232;](images/resume-html-preview.jpg) | ![HTML CV](images/cv-html-preview.jpg) |
@@ -38,7 +38,6 @@ Header information appears in the banner at the top of the `html` rendering. The
 | :------------ | :-------------------------------------------- |
 | `title`       | Your full name  for website header            |
 | `subtitle`    | Occupation or job title                       |
-: `_content.yml`
 
 For example:
 
@@ -55,7 +54,8 @@ The name displayed at the top of the `pdf` and `docx` files are passed to `autho
 | :------------ | :-------------------------------------------- |
 | `firstname`   | Your first name for `pdf` and `docx` files    |
 | `lastname`    | Your last name for `pdf` and `docx` files     |
-: `_content.yml`
+
+For example:
 
 ```yaml
 author:
@@ -79,7 +79,6 @@ Contact information for the top of the r&egrave;sum&egrave; and CV are passed to
 | `orcid`       | Your [ORCID](https://orcid.org/) number only.  Will generate the custom web URL directing to this user's public page.|
 | `researchgate` | Your [ResearchGate](https://www.researchgate.net/) handle only.  Will generate the custom web URL directing to this user's public page. |
 | `extrainfo`   | Any other information to include at the top of the r&egrave;sum&egrave; and CV? |
-: Contact info options for r&egrave;sum&egrave;s and CVs. Omitted if empty or not passed.
 
 A physical or mailing address can also be passed to the `contact` key. It is separated into `line1` and `line2` keys:
 
@@ -92,7 +91,7 @@ contact:
 
 Putting it all together so far:
 
-```{.yaml filename="_contents.yml"}
+```yaml
 ---
 title: "John Doe"
 subtitle: "Underwater Basket Weaver"
@@ -132,7 +131,7 @@ Education (*i.e.*, degrees earned) is provided as a list of `items` with the fol
 | `location`    | Location of the institution                   |
 | `date`        | Date of degree conferral                      |
 | `minor`       | Minor or secondary area(s) of study (optional) |
-| `extra`       | Any additional information related (*e.g.*, awards) (optional) |
+| `extra`       | Any additional information (*e.g.*, awards) (optional) |
 
 For example:
 
@@ -146,6 +145,11 @@ education:
       date: "2000"
       minor: "SCUBA Diving"
       extra: "Graduated top of my class of 1"
+    - degree: "Master of Arts"
+      major: "Upsidedown Underwater Basket Weaving"
+      institution: "University of Awesomeness"
+      location: "Anylocation, US"
+      date: "2002"
 ```
 
 #### Skills
@@ -156,7 +160,7 @@ Technical skills are included in r&egrave;sum&egrave;s only. They are displayed 
 | :------------ | :-------------------------------------------- |
 | `skill`       | Name of the skill                             |
 | `years`       | Number of years of experience                 |
-| `scale`       | Float, value between 0 and 1 quantifying the level of experience. Should be relative to `years`. For example, the skill with the maximum number of years of experience should have `scale` = 1. |
+| `scale`       | Float, value between 0 and 1 quantifying the amount of experience or level of expertise. Should be relative to `years`. For example, the skill with the maximum number of years of experience should have `scale` = 1. |
 
 The `skills` section also takes two additional arguments:
 
@@ -183,11 +187,11 @@ For example:
 ```yaml
 experience:
   items:
-    - role: Senior Basket Weaver III
-      employer: Underwater Basket Weavers of America
-      location: Pacific Ocean
-      extra: 2022 Employee of the Year
-      date: Jan 2010--present
+    - role: "Senior Basket Weaver III"
+      employer: "Underwater Basket Weavers of America"
+      location: "Pacific Ocean"
+      extra: "2022 Employee of the Year"
+      date: "Jan 2010--present"
       details: |
         * Design unique and custom baskets according to customers' needs
         * Assemble ~100 made-to-order baskets underwater each year, with 105% 5-star ratings on our customer feedback portal.
@@ -208,7 +212,7 @@ For example:
 research:
   items:
     - entry: "Developing ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
-      date: 2029-2023
+      date: "2029-2023"
 ```
 
 #### Awards
@@ -217,7 +221,7 @@ The optional `awards` category is only used in r&egrave;sum&egrave;s. Provide a 
 
 #### Funding Awards
 
-The optional `fundingawarded` category is used only CVs to list grants or other competitive funding. Provide as a list of `items` with keywords `entry` and `date`, as in `research` above.
+The optional `fundingawarded` category is used only in CVs to list grants or other competitive funding. Provide as a list of `items` with keywords `entry` and `date`, as in `research` above.
 
 #### Publications
 
@@ -227,22 +231,27 @@ Four categories of `publications` are supported: `peer-reviewed` for peer-review
 publications:
   peer-reviewed:
     items:
-      - paper: Paper 1
-      - paper: Paper 2
-      - paper: Paper 3
+      - paper: "Paper 1"
+      - paper: "Paper 2"
+      - paper: "Paper 3"
 ```
 
 #### Miscellaneous
 
-The r&egrave;sum&egrave; and CV file names are passed to `resumefilename` and `cvfilename`, respectively (do not include a file extension.) These are used to create hyperlinks to the `pdf` and `docx` files.
+The r&egrave;sum&egrave; and CV file names are passed to `resumefilename` and `cvfilename`, respectively (do not include a file extension.) These are used to create hyperlinks to the `pdf` and `docx` files:
+
+```yaml
+resumefilename: "my-resume"
+cvfilename: "my-cv"
+```
 
 ### Customization
 
 #### Rendering `html` and `docx`
 
-R&egrave;sum&egrave; and CV renderings can be customized in `resume.qmd` and `cv.qmd` Quarto markdown files, respectively. The most important elements to modify are the `output-file` arguments in the front matter under `resume-pdf` and `docx` in `resume.qmd` to specify the name of the r&egrave;sum&egrave; file the produced, and under `cv-pdf` and `docx` in `cv.qmd` to specify the name of the CV file to be produced.
+R&egrave;sum&egrave; and CV renderings can be customized in `resume.qmd` and `cv.qmd` Quarto markdown files, respectively. The most important elements to modify are the `output-file` arguments in the front matter under `resume-pdf` and `docx` in `resume.qmd` to specify the name of the r&egrave;sum&egrave; file produced, and under `cv-pdf` and `docx` in `cv.qmd` to specify the name of the CV file to be produced.
 
-The body of these markdown files controls the `html` and `docx` renderings. One may wish to  add, remove, or rearrange sections to either document, or change header names. In addition, any social or web media omitted from the `contact` section in `_contents.yml` should be removed or commented out in these files to prevent errors during rendering if `html` and/or `docx` renderings are desired. The current version of this template does not handle these entries conditionally.
+The body of these markdown files controls the `html` and `docx` renderings. One may wish to  add, remove, or rearrange sections in either document, or change header names. In addition, any social or web media omitted from the `contact` section in `_contents.yml` should be removed or commented out in these files to prevent errors during rendering if `html` and/or `docx` renderings are desired. The current version of this template does not handle these entries conditionally.
 
 These renderings are constructed using Python functions found in `scripts/moderncv.py`. All functions process subsets of `_contents.yml` passed to an `items` keyword. (Python loads the contents of YAML files as nested dictionaries and lists.) For example, multiple entries under the `skills` category in `_contents.yml` would create a list of dictionaries, one dictionary per skill, which would look like this:
 
@@ -250,17 +259,17 @@ These renderings are constructed using Python functions found in `scripts/modern
 with open("_contents.yml", "r") as f:
   contents = yaml.safe_load(f)
 
-print(contents['skills']['items'])
+print(contents["skills"]["items"])
 
 [{
-    'skill': 'Basket weaving',
-    'years': '20+ yrs.',
-    'scale': 1
+    "skill": "Basket weaving",
+    "years": "20+ yrs.",
+    "scale": 1
 },
 {
-    'skill': 'SCUBA',
-    'years': '15+ yrs.',
-    'scale': 0.7 
+    "skill": "SCUBA",
+    "years": "15+ yrs.",
+    "scale": 0.7 
 },...]
 ```
 
@@ -269,7 +278,7 @@ Some functions take additional arguments; these are summarized here but consult 
 | Function      | Arguments                 | Usage             |
 | :------------ | :------------------------ | :-----------------|
 | `mdlist`      | `items`: as described above <br> `bullets`: whether or not to include bullets in the list | Create a simple list of entries. Used for Awards and Publications. |
-| `mdskills`    | `items`: as described above <br> `ncols`: number of columns the skills table should be arranged in <br> `icons`: whether skills should be prefaced by an appropriate icon, if one is available for that skill (displayed in `html` rendering only) | Display skills in a r&egrave;sum&egrave;, either as a table (`pdf`) or a bulleted list (`html` and `docx`) |
+| `mdskills`    | `items`: as described above <br> `ncols`: number of columns for the skills table <br> `icons`: whether skills should be prefaced by an appropriate icon, if one is available for that skill (displayed in `html` rendering only) | Display skills in a r&egrave;sum&egrave;, either as a table (`pdf`) or a bulleted list (`html` and `docx`) |
 | `mdeducation` | `items`: as described above <br> `abbrev`: whether or not to always abbreviate degree type | Create a formatted list of degrees for a r&egrave;sum&egrave; |
 | `mdexperience`| `items`: as described above | Create a formatted list of professional experiences for a r&egrave;sum&egrave; |
 | `cventry`     | `items`: as described above | Create a list of CV entries prefaced by the date. Used for Research and Funding categories. |
