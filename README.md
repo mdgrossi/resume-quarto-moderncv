@@ -20,7 +20,7 @@ R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. File customi
 
 ### Preview
 
-::: {#resume-pdf layout-ncol=2 layout-nrow=2}
+::: {#previews layout-nrow=2}
 
 ![PDF r&#232;sum&#232;](images/resume-pdf-preview.jpg)
 
