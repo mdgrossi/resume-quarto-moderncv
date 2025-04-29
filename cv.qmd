@@ -54,6 +54,9 @@ with open("_contents.yml", "r") as f:
 :::
 
 <!-- Education -->
+
+::: {.content-hidden unless-meta="education.include-in-cv"}
+
 # {{< iconify zondicons education >}} Education
  
 ```{python}
@@ -63,7 +66,12 @@ if 'education' in contents.keys():
     cv.cveducation(items=contents['education']['items'], abbrev=True)
 ```
 
+:::
+
 <!-- Experience -->
+
+::: {.content-hidden unless-meta="experience.include-in-cv"}
+
 # {{< iconify ic baseline-work >}} Professional Appointments
 
 ```{python}
@@ -72,6 +80,12 @@ if 'education' in contents.keys():
 if 'experience' in contents.keys():
     cv.cvexperience(items=contents['experience']['items'])
 ```
+
+:::
+
+<!-- Research -->
+
+::: {.content-hidden unless-meta="research.include-in-cv"}
 
 # {{< iconify ic baseline-work >}} Research
 
@@ -82,7 +96,12 @@ if 'research' in contents.keys():
     cv.cventry(items=contents['research']['items'])
 ```
 
+:::
+
 <!-- Funding -->
+
+::: {.content-hidden unless-meta="fundingawarded.include-in-cv"}
+
 # {{< iconify solar money-bag-bold-duotone >}} Funding Procurement
 
 ```{python}
@@ -92,7 +111,12 @@ if 'fundingawarded' in contents.keys():
     cv.cventry(items=contents['fundingawarded']['items'])
 ```
 
+:::
+
 <!-- Publications -->
+
+::: {.content-hidden unless-meta="publications.include-in-cv"}
+
 # {{< iconify fxemoji newspaper >}} Publications and Presentations
 
 ## Peer Reviewed Publications
@@ -134,3 +158,5 @@ if 'publications' in contents.keys():
     if 'talks' in contents['publications'].keys():
         cv.mdlist(items=contents['publications']['talks']['items'], bullets=False)
 ```
+
+:::

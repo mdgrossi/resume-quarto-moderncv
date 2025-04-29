@@ -17,6 +17,8 @@ contact:
   extrainfo: "Anything else to highlight up front?"
 summary: "Optional paragraph summary of skills and experience"
 education:
+  include-in-resume: true
+  include-in-cv: true
   items:
     - degree: Bachelor of Arts
       major: Underwater Basket Weaving
@@ -31,6 +33,7 @@ education:
       location: Anylocation, US
       date: 2002
 skills:
+  include-in-resume: true
   ncol: 2 # How many columns should this list span?
   items:
     - skill: Basket weaving
@@ -47,6 +50,8 @@ skills:
       scale: 0.2 
   softskills: going with the flow
 experience:
+  include-in-resume: true
+  include-in-cv: true
   items:
     - role: Senior Basket Weaver III
       employer: Underwater Basket Weavers of America
@@ -57,13 +62,19 @@ experience:
         * Design unique and custom baskets according to customers' needs
         * Assemble ~100 made-to-order baskets underwater each year, with 105% 5-star ratings on our customer feedback portal.
 research:
+  include-in-resume: false
+  include-in-cv: true
   items:
     - entry: "Developing ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
       date: 2029-2023
 awards:
+  include-in-resume: true
+  include-in-cv: false
   items:
     - award: Fellow, International Association of Underwater Basket Weavers (2012) 
 publications:
+  include-in-resume: true
+  include-in-cv: true
   peer-reviewed:
     items:
       - paper: Paper 1
@@ -82,6 +93,7 @@ publications:
       - paper: Talk 2
       - paper: Poster 1
 fundingawarded:
+  include-in-cv: true
   items:
     - entry: 'Basket Weaving Innovation Initiative ($100k) "Testing new biofriendly weaving material in underwater environments"'
       date: 2019

@@ -109,6 +109,8 @@ $endif$
 \normalsize
 \makecvtitle
 
+$if(education)$
+$if(education.include-in-cv)$
 \section{Education}
 $for(education.items)$
 $if(education.items.minor)$
@@ -118,7 +120,11 @@ $else$
 \mycvitem[\cvspace]{$education.items.date$}{\textbf{$education.items.degree$}, $education.items.major$, $education.items.institution$, $education.items.location$ \newline \textit{$education.items.extra$}}
 $endif$
 $endfor$
+$endif$
+$endif$
 
+$if(experience)$
+$if(experience.include-in-cv)$
 \section{Professional Appointments}
 $for(experience.items)$
 $if(experience.items.role)$
@@ -133,22 +139,30 @@ $else$
 $endif$
 $endif$
 $endfor$
+$endif$
+$endif$
+
 
 $if(research)$
+$if(research.include-in-cv)$
 \section{Research}
 $for(research.items)$
 \mycvitem[\cvspace]{$research.items.date$}{$research.items.entry$}
 $endfor$
 $endif$
+$endif$
 
 $if(fundingawarded)$
+$if(fundingawarded.include-in-cv)$
 \section{Funding Procurement}
 $for(fundingawarded.items)$
 \mycvitem[\cvspace]{$fundingawarded.items.date$}{$fundingawarded.items.entry$}
 $endfor$
 $endif$
+$endif$
 
 $if(publications)$
+$if(publications.include-in-cv)$
 \section{Publications}
 $if(publications.peer-reviewed)$
 \subsection{Peer Reviewed Publications}
@@ -191,7 +205,7 @@ $endfor$
 $endif$
 
 $endif$
-
+$endif$
 % --------------------------------------------------------------------------------------------------------- %
 
 %\end{onehalfspacing}

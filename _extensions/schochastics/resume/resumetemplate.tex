@@ -109,12 +109,11 @@ $endif$
 
 \begin{document}
 
-% -----------------------------------     Call resume file here     ----------------------------------- %
-
 \normalsize
 \makecvtitle
 
-
+$if(skills)$
+$if(skills.include-in-resume)$
 \section{Skills}
 \vspace{-1em}
 \begin{multicols}{$skills.ncol$}
@@ -122,12 +121,16 @@ $for(skills.items)$
 \cvskillbar{$skills.items.skill$}{$skills.items.years$}{$skills.items.scale$}
 $endfor$
 \end{multicols}
+$endif$
 
 $if(skills.softskills)$
 \cvitem{\textcolor{color1}{$$\triangleright$$} \hspace{0.2em} Soft Skills}{$skills.softskills$}
 \vspace{\cvspace}
 $endif$
+$endif$
 
+$if(experience)$
+$if(experience.include-in-resume)$
 \section{Experience}
 $for(experience.items)$
 $if(experience.items.employer)$
@@ -136,7 +139,11 @@ $else$
 \cventry[\cvspace]{$experience.items.dates$}{$experience.items.role$}{}{$experience.items.where$}{$experience.items.extra$}{\vspace{0.25em} $experience.items.details$}
 $endif$
 $endfor$
+$endif$
+$endif$
 
+$if(education)$
+$if(education.include-in-resume)$
 \section{Education}
 $for(education.items)$
 $if(education.items.minor)$
@@ -145,8 +152,11 @@ $else$
 \cventry{$education.items.location$}{$education.items.institution$}{$education.items.degree$, $education.items.major$}{$education.items.date$}{$education.items.extra$}{}
 $endif$
 $endfor$
+$endif$
+$endif$
 
 $if(awards)$
+$if(awards.include-in-resume)$
 \section{Awards}
 \small
 \begin{itemize}
@@ -155,11 +165,13 @@ $for(awards.items)$
 $endfor$
 \end{itemize}
 $endif$
+$endif$
 
 \section{References}
 Available upon request.
 
 $if(publications)$
+$if(publications.include-in-resume)$
 \section{Publications}
 $if(publications.peer-reviewed)$
 \subsection{Peer Reviewed Publications}
@@ -188,9 +200,16 @@ $endfor$
 \end{itemize}
 $endif$
 
+$if(publications.talks)$
+\subsection{Talks and Presentations (select)}
+\begin{itemize}
+$for(publications.talks.items)$
+\item $publications.talks.items.paper$
+$endfor$
+\end{itemize}
 $endif$
-
-% --------------------------------------------------------------------------------------------------------- %
+$endif$
+$endif$
 
 %\end{onehalfspacing}
 \end{document}

@@ -28,7 +28,9 @@ R&egrave;sum&egrave; and CV content are entered in `_contents.yml`. Layout and f
 
 ### Creating a R&egrave;sum&egrave; and CV
 
-R&egrave;sum&egrave; and CV content are provided in YAML format in `_content.yml`. Most of the variables are used in both the r&egrave;sum&egrave; and CV, streamlining the process of making two separate but related documents. However, some entries are unique to one or the other document. All are described below. All entries are strings unless otherwise noted.
+R&egrave;sum&egrave; and CV content are provided in YAML format in `_content.yml`. Most (but not all) of the variables are used in both the r&egrave;sum&egrave; and CV, thereby streamlining the process of making two separate but related documents. All are described below. All entries are strings unless otherwise noted.
+
+All content variables (*e.g.*, education) contain `include-in-resume` and/or `include-in-cv` Boolean variables that, when `true`, will include that section in the r&egrave;sum&egrave; and/or CV, respectively. If `false` or omitted altogether, the section will not show up in either document. This makes it easy to keep the contents of both documents separate, if desired. Some fields, like funding procurement, can currently only be included in the CV, since this type of information is rarely (if ever) included in traditional r&egrave;sum&egrave;s.
 
 #### Header Information
 
@@ -133,10 +135,19 @@ Education (*i.e.*, degrees earned) is provided as a list of `items` with the fol
 | `minor`       | Minor or secondary area(s) of study (optional) |
 | `extra`       | Any additional information (*e.g.*, awards) (optional) |
 
+In addition, the `education` category also takes Boolean control flags specifying which document to include:
+
+| Keyword             | Description                                        |
+| :------------------ | :------------------------------------------------- |
+| `include-in-resume` | (Boolean) If `true`, this section will appear in the r&egrave;sum&egrave;. If `false` or omitted altogether, it will be excluded. |
+| `include-in-cv`     | (Boolean) If `true`, this section will appear in the CV. If `false` or omitted altogether, it will be excluded. |
+
 For example:
 
 ```yaml
 education:
+  include-in-resume: true
+  include-in-cv: true
   items:
     - degree: "Bachelor of Arts"
       major: "Underwater Basket Weaving"
@@ -160,12 +171,13 @@ Technical skills are included in r&egrave;sum&egrave;s only. They are displayed 
 | :------------ | :-------------------------------------------- |
 | `skill`       | Name of the skill                             |
 | `years`       | Number of years of experience                 |
-| `scale`       | Float, value between 0 and 1 quantifying the amount of experience or level of expertise. Should be relative to `years`. For example, the skill with the maximum number of years of experience should have `scale` = 1. |
+| `scale`       | (string) Value between 0 and 1 quantifying the amount of experience or level of expertise. Should be relative to `years`. For example, the skill with the maximum number of years of experience should have `scale` = 1. |
 
-The `skills` section also takes two additional arguments:
+The `skills` section also takes three additional arguments:
 
 | Keyword       | Description                                   |
 | :------------ | :-------------------------------------------- |
+| `include-in-resume` | (Boolean) If `true`, this section will be included in the r&egrave;sum&egrave;. If `false` or omitted, it will be excluded. |
 | `ncol`        | Integer specifying the number of columns for the skills list |
 | `softskills`  | Additional soft (*i.e.*, non-technical) skills passed as a stingle string of comma-separated skills (optional) |
 
@@ -182,10 +194,19 @@ Professional experience is passed as a list of `items`, as in `education` above,
 | `details`     | Description of job duties or accomplishments. This must be a single string, but asterisks (*) will be treated as bullets and will create a list when rendered. See example below. |
 | `extra`       | Any additional information to include (optional) |
 
+In addition, the `experience` category also takes Boolean control flags specifying which document to include:
+
+| Keyword             | Description                                        |
+| :------------------ | :------------------------------------------------- |
+| `include-in-resume` | (Boolean) If `true`, this section will appear in the r&egrave;sum&egrave;. If `false` or omitted altogether, it will be excluded. |
+| `include-in-cv`     | (Boolean) If `true`, this section will appear in the CV. If `false` or omitted altogether, it will be excluded. |
+
 For example:
 
 ```yaml
 experience:
+  include-in-resume: true
+  include-in-cv: true
   items:
     - role: "Senior Basket Weaver III"
       employer: "Underwater Basket Weavers of America"
@@ -206,10 +227,19 @@ The optional research category is only used in CVs. Research activities are pass
 | `entry`       | Description of research activity              |
 | `date`        | Date(s) of research activity                  |
 
+In addition, the `research` category also takes Boolean control flags specifying which document to include:
+
+| Keyword             | Description                                        |
+| :------------------ | :------------------------------------------------- |
+| `include-in-resume` | (Boolean) If `true`, this section will appear in the r&egrave;sum&egrave;. If `false` or omitted altogether, it will be excluded. |
+| `include-in-cv`     | (Boolean) If `true`, this section will appear in the CV. If `false` or omitted altogether, it will be excluded. |
+
 For example:
 
 ```yaml
 research:
+  include-in-resume: false
+  include-in-cv: true
   items:
     - entry: "Developing ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
       date: "2029-2023"
@@ -217,11 +247,16 @@ research:
 
 #### Awards
 
-The optional `awards` category is only used in r&egrave;sum&egrave;s. Provide a list of `items` with keyword `award`.
+Awards are passed as a list of `items` with keyword `award`. In addition, the `awards` category also takes Boolean control flags specifying which document to include:
+
+| Keyword             | Description                                        |
+| :------------------ | :------------------------------------------------- |
+| `include-in-resume` | (Boolean) If `true`, this section will appear in the r&egrave;sum&egrave;. If `false` or omitted altogether, it will be excluded. |
+| `include-in-cv`     | (Boolean) If `true`, this section will appear in the CV. If `false` or omitted altogether, it will be excluded. |
 
 #### Funding Awards
 
-The optional `fundingawarded` category is used only in CVs to list grants or other competitive funding. Provide as a list of `items` with keywords `entry` and `date`, as in `research` above.
+The optional `fundingawarded` category is currently used only in CVs to list grants or other competitive funding. Provide as a list of `items` with keywords `entry` and `date`, as in `research` above. As above, `include-in-cv` must be `true` for this section to appear.
 
 #### Publications
 
@@ -235,6 +270,15 @@ publications:
       - paper: "Paper 2"
       - paper: "Paper 3"
 ```
+
+In addition, the `publications` category also takes Boolean control flags specifying which document to include:
+
+| Keyword             | Description                                        |
+| :------------------ | :------------------------------------------------- |
+| `include-in-resume` | (Boolean) If `true`, this section will appear in the r&egrave;sum&egrave;. If `false` or omitted altogether, it will be excluded. |
+| `include-in-cv`     | (Boolean) If `true`, this section will appear in the CV. If `false` or omitted altogether, it will be excluded. |
+
+Note that these flags are passed to the top level `publications` and thus control the inclusion of the entire publications section. The categoies cannot currently be controlled individually without omitting data from `_contents.yml`. It is currently all or or nothing.
 
 #### Miscellaneous
 

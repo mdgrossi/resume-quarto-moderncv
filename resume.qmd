@@ -61,6 +61,9 @@ with open("_contents.yml", "r") as f:
 :::
 
 <!-- Skills-->
+
+::: {.content-hidden unless-meta="skills.include-in-resume"}
+
 # {{< iconify solar programming-outline >}} Skills
 
 ```{python}
@@ -71,7 +74,12 @@ if 'skills' in contents.keys():
     display(Markdown(f'- **Soft skills:** {contents["skills"]["softskills"]}'))
 ```
 
+:::
+
 <!-- Experience -->
+
+::: {.content-hidden unless-meta="experience.include-in-resume"}
+
 # {{< iconify ic baseline-work >}} Professional Experience
 
 ```{python}
@@ -81,7 +89,12 @@ if 'experience' in contents.keys():
     cv.mdexperience(items=contents['experience']['items'])
 ```
 
+:::
+
 <!-- Education -->
+
+::: {.content-hidden unless-meta="education.include-in-resume"}
+
 # {{< iconify zondicons education >}} Education
  
 ```{python}
@@ -91,7 +104,12 @@ if 'education' in contents.keys():
     cv.mdeducation(items=contents['education']['items'], abbrev=True)
 ```
 
+:::
+
 <!-- Awards -->
+
+::: {.content-hidden unless-meta="awards.include-in-resume"}
+
 # {{< iconify hugeicons star-award-01 >}} Awards
 
 ```{python}
@@ -101,7 +119,12 @@ if 'awards' in contents.keys():
     cv.mdlist(items=contents['awards']['items'])
 ```
 
+:::
+
 <!-- Publications -->
+
+::: {.content-hidden unless-meta="publications.include-in-resume"}
+
 # {{< iconify fxemoji newspaper >}} Publications
 
 ## Peer Reviewed Publications
@@ -110,8 +133,9 @@ if 'awards' in contents.keys():
 #| label: peer-review
 #| output: asis
 if 'publications' in contents.keys():
-    if 'peer-reviewed' in contents['publications'].keys():
-        cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
+    if contents['publications']['include-in-resume']:
+        if 'peer-reviewed' in contents['publications'].keys():
+            cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
 ```
 
 ## Conference Proceedings
@@ -133,3 +157,5 @@ if 'publications' in contents.keys():
     if 'tech-reports' in contents['publications'].keys():
         cv.mdlist(items=contents['publications']['tech-reports']['items'])
 ```
+
+:::
