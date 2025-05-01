@@ -6,6 +6,7 @@ project:
 title-block-banner: true
 execute: 
   echo: false
+latex-auto-mk: false
 pdf-engine: latexmk
 format:
   html:
