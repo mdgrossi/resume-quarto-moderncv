@@ -43,10 +43,14 @@
 \usepackage{enumitem} % Adjust bulleted list spacing (http://ctan.org/pkg/enumitem)
 
 % Page numbers
+$if(cv-page-numbers)$
+\usepackage{lastpage}
+\usepackage{fancyhdr}
 \nopagenumbers{}
-%.   OR
-%\usepackage{lastpage}
-%\rfoot{\addressfont\itshape\textcolor{gray}{Grossi, page \thepage\ of \pageref{LastPage}}}
+\rfoot{\addressfont\itshape\textcolor{gray}{$author.lastname$ | \thepage\ of \pageref{LastPage}}}
+$else$
+\nopagenumbers{}
+$endif$
 
 % cventry spacing
 \newcommand{\cvspace}{0.6em}
@@ -69,10 +73,13 @@
 \longtrue % switch to false in short version
 \newcommand{\coverLetter}[1]{\iflong #1\fi}
 
-
 % Header information
 \firstname{$author.firstname$}
+$if(author.suffix)$
+\familyname{$author.lastname$\textcolor{gray}{, $author.suffix$}}
+$else$
 \familyname{$author.lastname$}
+$endif$
 $if(subtitle)$
 \title{$subtitle$}
 $endif$
@@ -111,21 +118,47 @@ $endif$
 
 $if(education)$
 $if(education.include-in-cv)$
+$if(education.header)$
+\section{$education.header$}
+$else$
 \section{Education}
+$endif$
 $for(education.items)$
 $if(education.items.minor)$
 \mycvitem[\cvspace]{$education.items.date$}{\textbf{$education.items.degree$}, $education.items.major$, $education.items.institution$, $education.items.location$ \newline Minor in $education.items.minor$ | 
 \textit{$education.items.extra$}}
 $else$
+$if(education.items.extra)$
 \mycvitem[\cvspace]{$education.items.date$}{\textbf{$education.items.degree$}, $education.items.major$, $education.items.institution$, $education.items.location$ \newline \textit{$education.items.extra$}}
+$else$
+\mycvitem[\cvspace]{$education.items.date$}{\textbf{$education.items.degree$}, $education.items.major$, $education.items.institution$, $education.items.location$}
 $endif$
+$endif$
+$endfor$
+$endif$
+$endif$
+
+$if(additional-education)$
+$if(additional-education.include-in-cv)$
+\vspace{\cvspace/2}
+$if(additional-education.header)$
+\subsection{$additional-education.header$}
+$else$
+\subsection{Additional Education}
+$endif$
+$for(additional-education.items)$
+\mycvitem[\cvspace]{$additional-education.items.date$}{$additional-education.items.major$ ($additional-education.items.extra$), $additional-education.items.institution$, $additional-education.items.location$}
 $endfor$
 $endif$
 $endif$
 
 $if(experience)$
 $if(experience.include-in-cv)$
-\section{Professional Appointments}
+$if(experience.header)$
+\section{$experience.header$}
+$else$
+\section{Professional Experience}
+$endif$
 $for(experience.items)$
 $if(experience.items.role)$
 $if(experience.items.location)$
@@ -142,30 +175,74 @@ $endfor$
 $endif$
 $endif$
 
-
-$if(research)$
-$if(research.include-in-cv)$
-\section{Research}
-$for(research.items)$
-\mycvitem[\cvspace]{$research.items.date$}{$research.items.entry$}
+$if(awards)$
+$if(awards.include-in-cv)$
+$if(awards.header)$
+\section{$awards.header$}
+$else$
+\section{Awards}
+$endif$
+$for(awards.items)$
+\mycvitem[\cvspace]{$awards.items.date$}{$awards.items.award$}
 $endfor$
+$endif$
+$endif$
+
+$if(memberships)$
+$if(memberships.include-in-cv)$
+$if(memberships.header)$
+\section{$memberships.header$}
+$else$
+\section{Memberships}
+$endif$
+\vspace*{0.25em}
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(memberships.items)$
+\item $memberships.items.entry$
+$endfor$
+\end{list}
 $endif$
 $endif$
 
 $if(fundingawarded)$
 $if(fundingawarded.include-in-cv)$
-\section{Funding Procurement}
+$if(fundingawarded.header)$
+\section{$fundingawarded.header$}
+$else$
+\section{Funding Awarded}
+$endif$
 $for(fundingawarded.items)$
 \mycvitem[\cvspace]{$fundingawarded.items.date$}{$fundingawarded.items.entry$}
 $endfor$
 $endif$
 $endif$
 
+$if(research)$
+$if(research.include-in-cv)$
+$if(research.header)$
+\section{$research.header$}
+$else$
+\section{Research Experience}
+$endif$
+$for(research.items)$
+\mycvitem[\cvspace]{$research.items.date$}{$research.items.entry$}
+$endfor$
+$endif$
+$endif$
+
 $if(publications)$
 $if(publications.include-in-cv)$
+$if(publications.header)$
+\section{$publications.header$}
+$else$
 \section{Publications}
+$endif$
 $if(publications.peer-reviewed)$
-\subsection{Peer Reviewed Publications}
+$if(publications.peer-reviewed.subheader)$
+\subsection{$publications.peer-reviewed.subheader$}
+$else$
+\subsection{Peer Reviewed}
+$endif$
 \vspace*{0.25em}
 \begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
 $for(publications.peer-reviewed.items)$
@@ -175,7 +252,11 @@ $endfor$
 $endif$
 
 $if(publications.proceedings)$
-\subsection{Conference Proceedings}
+$if(publications.proceedings.subheader)$
+\subsection{$publications.proceedings.subheader$}
+$else$
+\subsection{Proceedings}
+$endif$
 \vspace*{0.25em}
 \begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
 $for(publications.proceedings.items)$
@@ -185,7 +266,11 @@ $endfor$
 $endif$
 
 $if(publications.tech-reports)$
-\subsection{Technical Reports (not peer reviewed)}
+$if(publications.tech-reports.subheader)$
+\subsection{$publications.tech-reports.subheader$}
+$else$
+\subsection{Technical Reports}
+$endif$
 \vspace*{0.25em}
 \begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
 $for(publications.tech-reports.items)$
@@ -194,8 +279,25 @@ $endfor$
 \end{list}
 $endif$
 
+$if(publications.cvtalks)$
+$if(publications.cvtalks.subheader)$
+\subsection{$publications.cvtalks.subheader$}
+$else$
+\subsection{Posters and Talks}
+$endif$
+\vspace*{0.25em}
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(publications.cvtalks.items)$
+\item $publications.cvtalks.items.paper$
+$endfor$
+\end{list}
+$else$
 $if(publications.talks)$
-\subsection{Posters, Presentations, and Contributed Abstracts}
+$if(publications.cvtalks.subheader)$
+\subsection{$publications.cvtalks.subheader$}
+$else$
+\subsection{Posters and Talks}
+$endif$
 \vspace*{0.25em}
 \begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
 $for(publications.talks.items)$
@@ -203,9 +305,75 @@ $for(publications.talks.items)$
 $endfor$
 \end{list}
 $endif$
+$endif$
 
 $endif$
 $endif$
+
+$if(media)$
+$if(media.include-in-cv)$
+$if(media.header)$
+\section{$media.header$}
+$else$
+\section{Media Publicity}
+$endif$
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(media.items)$
+\item $media.items.entry$
+$endfor$
+\end{list}
+$endif$
+$endif$
+
+$if(teaching)$
+$if(teaching.include-in-cv)$
+$if(teaching.header)$
+\section{$teaching.header$}
+$else$
+\section{Teaching}
+$endif$
+$for(teaching.items)$
+$if(teaching.items.extra)$
+\mycvitem[\cvspace]{$teaching.items.date$}{$teaching.items.role$, $teaching.items.course$ (\textit{$teaching.items.extra$}), $teaching.items.institution$}
+$else$
+\mycvitem[\cvspace]{$teaching.items.date$}{$teaching.items.role$, $teaching.items.course$, $teaching.items.institution$}
+$endif$
+$endfor$
+$endif$
+$endif$
+
+$if(service)$
+$if(service.include-in-cv)$
+$if(service.header)$
+\section{$service.header$}
+$else$
+\section{Community Service}
+$endif$
+$for(service.items)$
+$if(service.items.extra)$
+\mycvitem[\cvspace]{$service.items.date$}{$service.items.activity$ (\textit{$service.items.extra$}), $service.items.institution$}
+$else$
+\mycvitem[\cvspace]{$service.items.date$}{$service.items.activity$, $service.items.institution$}
+$endif$
+$endfor$
+$endif$
+$endif$
+
+$if(certifications)$
+$if(certifications.include-in-cv)$
+$if(certifications.header)$
+\section{$certifications.header$}
+$else$
+\section{Certifications}
+$endif$
+\begin{list}{}{\leftmargin=1em \itemindent=-1em \itemsep=0.25em}
+$for(certifications.items)$
+\item $certifications.items.entry$
+$endfor$
+\end{list}
+$endif$
+$endif$
+
 % --------------------------------------------------------------------------------------------------------- %
 
 %\end{onehalfspacing}

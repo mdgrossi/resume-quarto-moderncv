@@ -17,11 +17,11 @@
 %
 % =========================================================================== %
 
+% Resume theme
 \moderncvtheme[blue]{banking}
 
 % character encoding
-\usepackage[utf8]{inputenc}		
-% \usepackage[USenglish]{isodate}
+\usepackage[utf8]{inputenc}
 
 % Page margins and column widths
 \usepackage[margin=0.6in]{geometry}
@@ -43,10 +43,14 @@
 \usepackage{enumitem} % Adjust bulleted list spacing (http://ctan.org/pkg/enumitem)
 
 % Page numbers
+$if(resume-page-numbers)$
+\usepackage{lastpage}
+\usepackage{fancyhdr}
 \nopagenumbers{}
-%.   OR
-%\usepackage{lastpage}
-%\rfoot{\addressfont\itshape\textcolor{gray}{Grossi, page \thepage\ of \pageref{LastPage}}}
+\rfoot{\addressfont\itshape\textcolor{gray}{$author.lastname$ | \thepage\ of \pageref{LastPage}}}
+$else$
+\nopagenumbers{}
+$endif$
 
 % cventry spacing
 \newcommand{\cvspace}{0.6em}
@@ -72,15 +76,13 @@
 	 \vspace{0.5em}%
 }
 
-% Exclude cover letter
-\newif\iflong
-\longtrue % switch to false in short version
-\newcommand{\coverLetter}[1]{\iflong #1\fi}
-
-
 % Header information
 \firstname{$author.firstname$}
+$if(author.suffix)$
+\familyname{$author.lastname$\textcolor{gray}{, $author.suffix$}}
+$else$
 \familyname{$author.lastname$}
+$endif$
 $if(subtitle)$
 \title{$subtitle$}
 $endif$
@@ -88,7 +90,7 @@ $if(contact.address)$
 \address{$contact.address.line1$}{$contact.address.line2$}
 $endif$
 $if(contact.phone)$
-\phone{$contact.phone$}
+\phone[mobile]{$contact.phone$}
 $endif$
 $if(contact.email)$
 \email{$contact.email$}
@@ -99,8 +101,14 @@ $endif$
 $if(contact.linkedin)$
 \social[linkedin]{$contact.linkedin$}
 $endif$
-$if(contact.extracvinfo)$
-\extrainfo{$contact.extracvinfo$}
+$if(contact.orcid)$
+\social[orcid]{$contact.orcid$}
+$endif$
+$if(contact.researchgate)$
+\social[researchgate]{$contact.researchgate$}
+$endif$
+$if(contact.extrainfo)$
+\extrainfo{$contact.extrainfo$}
 $endif$
 
 $if(summary)$
@@ -114,7 +122,11 @@ $endif$
 
 $if(skills)$
 $if(skills.include-in-resume)$
+$if(skills.header)$
+\section{$skills.header$}
+$else$
 \section{Skills}
+$endif$
 \vspace{-1em}
 \begin{multicols}{$skills.ncol$}
 $for(skills.items)$
@@ -131,7 +143,11 @@ $endif$
 
 $if(experience)$
 $if(experience.include-in-resume)$
+$if(experience.header)$
+\section{$experience.header$}
+$else$
 \section{Experience}
+$endif$
 $for(experience.items)$
 $if(experience.items.employer)$
 \cventry[\cvspace]{$experience.items.dates$}{$experience.items.role$}{$experience.items.employer$ \vspace{0.25em}}{$experience.items.where$}{$experience.items.extra$}{\vspace{0.25em} $experience.items.details$}
@@ -144,7 +160,11 @@ $endif$
 
 $if(education)$
 $if(education.include-in-resume)$
+$if(education.head)$
+\section{$education.header$}
+$else$
 \section{Education}
+$endif$
 $for(education.items)$
 $if(education.items.minor)$
 \cventry{$education.items.location$}{$education.items.institution$}{$education.items.degree$, $education.items.major$}{$education.items.date$}{$education.items.extra$}{Minor in $education.items.minor$}
@@ -157,7 +177,11 @@ $endif$
 
 $if(awards)$
 $if(awards.include-in-resume)$
+$if(awards.header)$
+\section{$awards.header$}
+$else$
 \section{Awards}
+$endif$
 \small
 \begin{itemize}
 $for(awards.items)$
@@ -172,9 +196,17 @@ Available upon request.
 
 $if(publications)$
 $if(publications.include-in-resume)$
+$if(publications.header)$
+\section{$publications.header$}
+$else$
 \section{Publications}
+$endif$
 $if(publications.peer-reviewed)$
-\subsection{Peer Reviewed Publications}
+$if(publications.peer-reviewed.subheader)$
+\subsection{$publications.peer-reviewed.subheader$}
+$else$
+\subsection{Peer Reviewed}
+$endif$
 \begin{itemize}
 $for(publications.peer-reviewed.items)$
 \item $publications.peer-reviewed.items.paper$
@@ -183,7 +215,11 @@ $endfor$
 $endif$
 
 $if(publications.proceedings)$
-\subsection{Conference Proceedings}
+$if(publications.proceedings.subheader)$
+\subsection{$publications.proceedings.subheader$}
+$else$
+\subsection{Proceedings}
+$endif$
 \begin{itemize}
 $for(publications.proceedings.items)$
 \item $publications.proceedings.items.paper$
@@ -192,7 +228,11 @@ $endfor$
 $endif$
 
 $if(publications.tech-reports)$
-\subsection{Technical Reports (not peer reviewed)}
+$if(publications.tech-reports.subheader)$
+\subsection{$publications.tech-reports.subheader$}
+$else$
+\subsection{Technical Reports}
+$endif$
 \begin{itemize}
 $for(publications.tech-reports.items)$
 \item $publications.tech-reports.items.paper$
@@ -201,7 +241,11 @@ $endfor$
 $endif$
 
 $if(publications.talks)$
-\subsection{Talks and Presentations (select)}
+$if(publications.talks.subheader)$
+\subsection{$publications.talks.subheader$}
+$else$
+\subsection{Talks and Posters}
+$endif$
 \begin{itemize}
 $for(publications.talks.items)$
 \item $publications.talks.items.paper$

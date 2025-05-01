@@ -28,7 +28,7 @@ with open("_contents.yml", "r") as f:
 
 <div style="text-align: center">
 
-[Email](mailto:{{< meta contact.email >}}) |  [Website]({{< meta contact.website >}}) | [GitHub](https://github.com/{{< meta contact.github >}}) | [LinkedIn](https://www.linkedin.com/in/{{< meta contact.linkedin >}}) | [ORCID](https://orcid.org/{{< meta contact.orcid >}}) | [ResearchGate](https://www.researchgate.net/profile/{{< meta contact.researchgate >}})
+[Email](mailto:{{< meta contact.email >}}) | [Website]({{< meta contact.website >}}) | [GitHub](https://github.com/{{< meta contact.github >}}) | [LinkedIn](https://www.linkedin.com/in/{{< meta contact.linkedin >}}) | [ORCID](https://orcid.org/{{< meta contact.orcid >}}) | [ResearchGate](https://www.researchgate.net/profile/{{< meta contact.researchgate >}})
 
 </div>
 
@@ -64,7 +64,7 @@ with open("_contents.yml", "r") as f:
 
 ::: {.content-hidden unless-meta="skills.include-in-resume"}
 
-# {{< iconify solar programming-outline >}} Skills
+# {{< iconify solar programming-outline >}} {{< meta skills.header >}}
 
 ```{python}
 #| label: skills
@@ -80,7 +80,7 @@ if 'skills' in contents.keys():
 
 ::: {.content-hidden unless-meta="experience.include-in-resume"}
 
-# {{< iconify ic baseline-work >}} Professional Experience
+# {{< iconify ic baseline-work >}} {{< meta experience.header >}}
 
 ```{python}
 #| label: experience
@@ -95,7 +95,7 @@ if 'experience' in contents.keys():
 
 ::: {.content-hidden unless-meta="education.include-in-resume"}
 
-# {{< iconify zondicons education >}} Education
+# {{< iconify zondicons education >}} {{< meta education.header >}}
  
 ```{python}
 #| label: education
@@ -110,7 +110,7 @@ if 'education' in contents.keys():
 
 ::: {.content-hidden unless-meta="awards.include-in-resume"}
 
-# {{< iconify hugeicons star-award-01 >}} Awards
+# {{< iconify hugeicons star-award-01 >}} {{< meta awards.header >}}
 
 ```{python}
 #| label: awards
@@ -125,9 +125,9 @@ if 'awards' in contents.keys():
 
 ::: {.content-hidden unless-meta="publications.include-in-resume"}
 
-# {{< iconify fxemoji newspaper >}} Publications
+# {{< iconify fxemoji newspaper >}} {{< meta publications.header >}}
 
-## Peer Reviewed Publications
+## {{< meta publications.peer-reviewed.subheader >}}
 
 ```{python}
 #| label: peer-review
@@ -138,7 +138,7 @@ if 'publications' in contents.keys():
             cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
 ```
 
-## Conference Proceedings
+## {{< meta publications.proceedings.subheader >}}
 
 ```{python}
 #| label: proceedings
@@ -148,7 +148,7 @@ if 'publications' in contents.keys():
         cv.mdlist(items=contents['publications']['proceedings']['items'])
 ```
 
-## Technical Reports (not peer reviewed)
+## {{< meta publications.talks.subheader >}}
 
 ```{python}
 #| label: techreports
