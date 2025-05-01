@@ -2,71 +2,120 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "John Doe",
+    "title": "John Doe, Jr.",
     "section": "",
     "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè — for the private sector\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ — for academia\nPreview site\npdf\ndocx\n                   \n\n\n\n\n\nInstructions for using this template can be found in the repo README."
   },
   {
     "objectID": "resume.html",
     "href": "resume.html",
-    "title": "John Doe",
+    "title": "John Doe, Jr.",
     "section": "",
     "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
   },
   {
-    "objectID": "resume.html#peer-reviewed-publications",
-    "href": "resume.html#peer-reviewed-publications",
-    "title": "John Doe",
-    "section": "Peer Reviewed Publications",
-    "text": "Peer Reviewed Publications\n\nPaper 1\nPaper 2\nPaper 3"
+    "objectID": "resume.html#section-5",
+    "href": "resume.html#section-5",
+    "title": "John Doe, Jr.",
+    "section": "Peer Reviewed",
+    "text": "Peer Reviewed\n\nPaper 1\nPaper 2\nPaper 3"
   },
   {
-    "objectID": "resume.html#conference-proceedings",
-    "href": "resume.html#conference-proceedings",
-    "title": "John Doe",
+    "objectID": "resume.html#section-6",
+    "href": "resume.html#section-6",
+    "title": "John Doe, Jr.",
     "section": "Conference Proceedings",
     "text": "Conference Proceedings\n\nProceedings 1\nProceedings 2"
   },
   {
-    "objectID": "resume.html#technical-reports-not-peer-reviewed",
-    "href": "resume.html#technical-reports-not-peer-reviewed",
-    "title": "John Doe",
-    "section": "Technical Reports (not peer reviewed)",
-    "text": "Technical Reports (not peer reviewed)\n\nTech Report 1"
+    "objectID": "resume.html#section-7",
+    "href": "resume.html#section-7",
+    "title": "John Doe, Jr.",
+    "section": "Talks and Posters",
+    "text": "Talks and Posters\n\nTech Report 1"
   },
   {
     "objectID": "cv.html",
     "href": "cv.html",
-    "title": "John Doe",
+    "title": "John Doe, Jr.",
     "section": "",
     "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
   },
   {
-    "objectID": "cv.html#peer-reviewed-publications",
-    "href": "cv.html#peer-reviewed-publications",
-    "title": "John Doe",
-    "section": "Peer Reviewed Publications",
-    "text": "Peer Reviewed Publications\nPaper 1\nPaper 2\nPaper 3"
+    "objectID": "cv.html#section",
+    "href": "cv.html#section",
+    "title": "John Doe, Jr.",
+    "section": " Education",
+    "text": "Education\n\n\n\n\n2000\n\n\nB.A., Underwater Basket Weaving, University of Awesomeness, Anylocation, USMinor: SCUBA Diving | Graduated top of my class of 1\n\n\n\n\n2002\n\n\nM.A., Upsidedown Underwater Basket Weaving, University of Awesomeness, Anylocation, US\n\n\n\n\n\nAdditional Higher Education (no degree)\n\n\n\n\n2014\n\n\nYarn making (3 credit hours), University of Awesomeness, Anylocation, US"
   },
   {
-    "objectID": "cv.html#conference-proceedings",
-    "href": "cv.html#conference-proceedings",
-    "title": "John Doe",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\nProceedings 1\nProceedings 2"
+    "objectID": "cv.html#section-2",
+    "href": "cv.html#section-2",
+    "title": "John Doe, Jr.",
+    "section": " Professional Appointments",
+    "text": "Professional Appointments\n\n\n\n\nJan 2010–present\n\n\nSenior Basket Weaver III | 2022 Employee of the YearUnderwater Basket Weavers of America, Pacific Ocean"
   },
   {
-    "objectID": "cv.html#technical-reports-not-peer-reviewed",
-    "href": "cv.html#technical-reports-not-peer-reviewed",
-    "title": "John Doe",
-    "section": "Technical Reports (not peer reviewed)",
-    "text": "Technical Reports (not peer reviewed)\nTech Report 1"
+    "objectID": "cv.html#section-3",
+    "href": "cv.html#section-3",
+    "title": "John Doe, Jr.",
+    "section": " Awards",
+    "text": "Awards\n\n\n\n\n2012\n\n\nFellow, International Association of Underwater Basket Weavers"
   },
   {
-    "objectID": "cv.html#presentations-posters-and-contributed-abstracts",
-    "href": "cv.html#presentations-posters-and-contributed-abstracts",
-    "title": "John Doe",
-    "section": "Presentations, Posters, and Contributed Abstracts",
-    "text": "Presentations, Posters, and Contributed Abstracts\nTalk 1\nTalk 2\nPoster 1"
+    "objectID": "cv.html#section-4",
+    "href": "cv.html#section-4",
+    "title": "John Doe, Jr.",
+    "section": " Professional Memberships",
+    "text": "Professional Memberships\n\nInternational Basket Weaving Society"
+  },
+  {
+    "objectID": "cv.html#section-5",
+    "href": "cv.html#section-5",
+    "title": "John Doe, Jr.",
+    "section": " Funding Procurement",
+    "text": "Funding Procurement\n\n\n\n\n2019\n\n\nBasket Weaving Innovation Initiative ($100k) “Testing new biofriendly weaving material in underwater environments”"
+  },
+  {
+    "objectID": "cv.html#section-6",
+    "href": "cv.html#section-6",
+    "title": "John Doe, Jr.",
+    "section": " Research Experience",
+    "text": "Research Experience\n\n\n\n\n2029-2023\n\n\nDeveloping ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
+  },
+  {
+    "objectID": "cv.html#section-7",
+    "href": "cv.html#section-7",
+    "title": "John Doe, Jr.",
+    "section": " Publications and Presentations",
+    "text": "Publications and Presentations\n\nPeer Reviewed\nPaper 1\nPaper 2\nPaper 3\n\n\nConference Proceedings\nProceedings 1\nProceedings 2\n\n\nTechnical Reports (not peer reviewed)\nTech Report 1\n\n\nTalks and Posters\nTalk 1\nTalk 2\nPoster 1"
+  },
+  {
+    "objectID": "cv.html#section-12",
+    "href": "cv.html#section-12",
+    "title": "John Doe, Jr.",
+    "section": " Media Publicity",
+    "text": "Media Publicity\n\nLocal news interview about unusual careers (2005)"
+  },
+  {
+    "objectID": "cv.html#section-13",
+    "href": "cv.html#section-13",
+    "title": "John Doe, Jr.",
+    "section": " Teaching",
+    "text": "Teaching\n\n\n\n\n2019\n\n\nStudent Teacher, ART 101: Introduction to Basketry (‘Twas a great class’), University of Awesomeness"
+  },
+  {
+    "objectID": "cv.html#section-14",
+    "href": "cv.html#section-14",
+    "title": "John Doe, Jr.",
+    "section": " Community Service",
+    "text": "Community Service\n\n\n\n\n1999\n\n\nFounded a basket weaving club, University of Awesomeness"
+  },
+  {
+    "objectID": "cv.html#section-15",
+    "href": "cv.html#section-15",
+    "title": "John Doe, Jr.",
+    "section": " Certifications",
+    "text": "Certifications\n\nSCUBA"
   }
 ]
