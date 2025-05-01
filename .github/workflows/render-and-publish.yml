@@ -35,6 +35,7 @@ jobs:
         tinytex: true 
         # uncomment below and fill to pin a version
         # version: 0.9.600
+        version: 2025.04
 
     - name: Render and Publish to GitHub Pages
       uses: quarto-dev/quarto-actions/publish@v2
