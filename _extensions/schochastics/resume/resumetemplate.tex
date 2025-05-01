@@ -122,8 +122,8 @@ $endif$
 
 $if(skills)$
 $if(skills.include-in-resume)$
-$if(skills.header)$
-\section{$skills.header$}
+$if(skills.resume-header)$
+\section{$skills.resume-header$}
 $else$
 \section{Skills}
 $endif$
@@ -143,8 +143,8 @@ $endif$
 
 $if(experience)$
 $if(experience.include-in-resume)$
-$if(experience.header)$
-\section{$experience.header$}
+$if(experience.resume-header)$
+\section{$experience.resume-header$}
 $else$
 \section{Experience}
 $endif$
@@ -161,7 +161,7 @@ $endif$
 $if(education)$
 $if(education.include-in-resume)$
 $if(education.head)$
-\section{$education.header$}
+\section{$education.resume-header$}
 $else$
 \section{Education}
 $endif$
@@ -177,8 +177,8 @@ $endif$
 
 $if(awards)$
 $if(awards.include-in-resume)$
-$if(awards.header)$
-\section{$awards.header$}
+$if(awards.resume-header)$
+\section{$awards.resume-header$}
 $else$
 \section{Awards}
 $endif$
@@ -196,14 +196,14 @@ Available upon request.
 
 $if(publications)$
 $if(publications.include-in-resume)$
-$if(publications.header)$
-\section{$publications.header$}
+$if(publications.resume-header)$
+\section{$publications.resume-header$}
 $else$
 \section{Publications}
 $endif$
 $if(publications.peer-reviewed)$
-$if(publications.peer-reviewed.subheader)$
-\subsection{$publications.peer-reviewed.subheader$}
+$if(publications.peer-reviewed.resume-subheader)$
+\subsection{$publications.peer-reviewed.resume-subheader$}
 $else$
 \subsection{Peer Reviewed}
 $endif$
@@ -215,8 +215,8 @@ $endfor$
 $endif$
 
 $if(publications.proceedings)$
-$if(publications.proceedings.subheader)$
-\subsection{$publications.proceedings.subheader$}
+$if(publications.proceedings.resume-subheader)$
+\subsection{$publications.proceedings.resume-subheader$}
 $else$
 \subsection{Proceedings}
 $endif$
@@ -228,8 +228,8 @@ $endfor$
 $endif$
 
 $if(publications.tech-reports)$
-$if(publications.tech-reports.subheader)$
-\subsection{$publications.tech-reports.subheader$}
+$if(publications.tech-reports.resume-subheader)$
+\subsection{$publications.tech-reports.resume-subheader$}
 $else$
 \subsection{Technical Reports}
 $endif$
@@ -241,8 +241,8 @@ $endfor$
 $endif$
 
 $if(publications.talks)$
-$if(publications.talks.subheader)$
-\subsection{$publications.talks.subheader$}
+$if(publications.talks.resume-subheader)$
+\subsection{$publications.talks.resume-subheader$}
 $else$
 \subsection{Talks and Posters}
 $endif$

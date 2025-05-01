@@ -118,8 +118,8 @@ $endif$
 
 $if(education)$
 $if(education.include-in-cv)$
-$if(education.header)$
-\section{$education.header$}
+$if(education.cv-header)$
+\section{$education.cv-header$}
 $else$
 \section{Education}
 $endif$
@@ -141,8 +141,8 @@ $endif$
 $if(additional-education)$
 $if(additional-education.include-in-cv)$
 \vspace{\cvspace/2}
-$if(additional-education.header)$
-\subsection{$additional-education.header$}
+$if(additional-education.cv-header)$
+\subsection{$additional-education.cv-header$}
 $else$
 \subsection{Additional Education}
 $endif$
@@ -154,8 +154,8 @@ $endif$
 
 $if(experience)$
 $if(experience.include-in-cv)$
-$if(experience.header)$
-\section{$experience.header$}
+$if(experience.cv-header)$
+\section{$experience.cv-header$}
 $else$
 \section{Professional Experience}
 $endif$
@@ -177,8 +177,8 @@ $endif$
 
 $if(awards)$
 $if(awards.include-in-cv)$
-$if(awards.header)$
-\section{$awards.header$}
+$if(awards.cv-header)$
+\section{$awards.cv-header$}
 $else$
 \section{Awards}
 $endif$
@@ -190,8 +190,8 @@ $endif$
 
 $if(memberships)$
 $if(memberships.include-in-cv)$
-$if(memberships.header)$
-\section{$memberships.header$}
+$if(memberships.cv-header)$
+\section{$memberships.cv-header$}
 $else$
 \section{Memberships}
 $endif$
@@ -206,8 +206,8 @@ $endif$
 
 $if(fundingawarded)$
 $if(fundingawarded.include-in-cv)$
-$if(fundingawarded.header)$
-\section{$fundingawarded.header$}
+$if(fundingawarded.cv-header)$
+\section{$fundingawarded.cv-header$}
 $else$
 \section{Funding Awarded}
 $endif$
@@ -219,8 +219,8 @@ $endif$
 
 $if(research)$
 $if(research.include-in-cv)$
-$if(research.header)$
-\section{$research.header$}
+$if(research.cv-header)$
+\section{$research.cv-header$}
 $else$
 \section{Research Experience}
 $endif$
@@ -232,14 +232,14 @@ $endif$
 
 $if(publications)$
 $if(publications.include-in-cv)$
-$if(publications.header)$
-\section{$publications.header$}
+$if(publications.cv-header)$
+\section{$publications.cv-header$}
 $else$
 \section{Publications}
 $endif$
 $if(publications.peer-reviewed)$
-$if(publications.peer-reviewed.subheader)$
-\subsection{$publications.peer-reviewed.subheader$}
+$if(publications.peer-reviewed.cv-subheader)$
+\subsection{$publications.peer-reviewed.cv-subheader$}
 $else$
 \subsection{Peer Reviewed}
 $endif$
@@ -252,8 +252,8 @@ $endfor$
 $endif$
 
 $if(publications.proceedings)$
-$if(publications.proceedings.subheader)$
-\subsection{$publications.proceedings.subheader$}
+$if(publications.proceedings.cv-subheader)$
+\subsection{$publications.proceedings.cv-subheader$}
 $else$
 \subsection{Proceedings}
 $endif$
@@ -266,8 +266,8 @@ $endfor$
 $endif$
 
 $if(publications.tech-reports)$
-$if(publications.tech-reports.subheader)$
-\subsection{$publications.tech-reports.subheader$}
+$if(publications.tech-reports.cv-subheader)$
+\subsection{$publications.tech-reports.cv-subheader$}
 $else$
 \subsection{Technical Reports}
 $endif$
@@ -280,8 +280,8 @@ $endfor$
 $endif$
 
 $if(publications.cvtalks)$
-$if(publications.cvtalks.subheader)$
-\subsection{$publications.cvtalks.subheader$}
+$if(publications.cvtalks.cv-subheader)$
+\subsection{$publications.cvtalks.cv-subheader$}
 $else$
 \subsection{Posters and Talks}
 $endif$
@@ -293,8 +293,8 @@ $endfor$
 \end{list}
 $else$
 $if(publications.talks)$
-$if(publications.cvtalks.subheader)$
-\subsection{$publications.cvtalks.subheader$}
+$if(publications.cvtalks.cv-subheader)$
+\subsection{$publications.cvtalks.cv-subheader$}
 $else$
 \subsection{Posters and Talks}
 $endif$
@@ -312,8 +312,8 @@ $endif$
 
 $if(media)$
 $if(media.include-in-cv)$
-$if(media.header)$
-\section{$media.header$}
+$if(media.cv-header)$
+\section{$media.cv-header$}
 $else$
 \section{Media Publicity}
 $endif$
@@ -327,8 +327,8 @@ $endif$
 
 $if(teaching)$
 $if(teaching.include-in-cv)$
-$if(teaching.header)$
-\section{$teaching.header$}
+$if(teaching.cv-header)$
+\section{$teaching.cv-header$}
 $else$
 \section{Teaching}
 $endif$
@@ -344,8 +344,8 @@ $endif$
 
 $if(service)$
 $if(service.include-in-cv)$
-$if(service.header)$
-\section{$service.header$}
+$if(service.cv-header)$
+\section{$service.cv-header$}
 $else$
 \section{Community Service}
 $endif$
@@ -361,8 +361,8 @@ $endif$
 
 $if(certifications)$
 $if(certifications.include-in-cv)$
-$if(certifications.header)$
-\section{$certifications.header$}
+$if(certifications.cv-header)$
+\section{$certifications.cv-header$}
 $else$
 \section{Certifications}
 $endif$
