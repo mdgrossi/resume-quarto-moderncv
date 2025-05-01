@@ -31,7 +31,7 @@ education:
       minor: SCUBA Diving
       extra: Graduated top of my class of 1
     - degree: Master of Arts
-      major: Upsidedown Underwater Basket Weaving
+      major: Upside Down Underwater Basket Weaving
       institution: University of Awesomeness
       location: Anylocation, US
       date: 2002
@@ -83,7 +83,7 @@ research:
   resume-header: "Research Experience"
   cv-header: "Research Experience"
   items:
-    - entry: "Developing ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
+    - entry: "Developing eco-friendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
       date: 2029-2023
 awards:
   include-in-resume: true
