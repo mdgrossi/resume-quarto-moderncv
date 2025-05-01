@@ -32,10 +32,10 @@ jobs:
       uses: quarto-dev/quarto-actions/setup@v2
       with:
         # To install LaTeX to build PDF book 
-        tinytex: true 
+        tinytex: 
+          version: 2025.04
         # uncomment below and fill to pin a version
         # version: 0.9.600
-        version: v2025.04
 
     - name: Render and Publish to GitHub Pages
       uses: quarto-dev/quarto-actions/publish@v2
