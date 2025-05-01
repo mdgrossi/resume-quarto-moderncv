@@ -110,7 +110,7 @@ if 'education' in contents.keys():
 
 ::: {.content-hidden unless-meta="awards.include-in-resume"}
 
-# {{< iconify hugeicons star-award-01 >}} {{< meta awards.resume-header >}}
+## {{< iconify hugeicons star-award-01 >}} {{< meta awards.resume-header >}}
 
 ```{python}
 #| label: awards
@@ -125,9 +125,9 @@ if 'awards' in contents.keys():
 
 ::: {.content-hidden unless-meta="publications.include-in-resume"}
 
-# {{< iconify fxemoji newspaper >}} {{< meta publications.resume-header >}}
+## {{< iconify fxemoji newspaper >}} {{< meta publications.resume-header >}}
 
-## {{< meta publications.peer-reviewed.resume-subheader >}}
+### {{< meta publications.peer-reviewed.resume-subheader >}}
 
 ```{python}
 #| label: peer-review
@@ -138,7 +138,7 @@ if 'publications' in contents.keys():
             cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
 ```
 
-## {{< meta publications.proceedings.resume-subheader >}}
+### {{< meta publications.proceedings.resume-subheader >}}
 
 ```{python}
 #| label: proceedings
@@ -148,7 +148,7 @@ if 'publications' in contents.keys():
         cv.mdlist(items=contents['publications']['proceedings']['items'])
 ```
 
-## {{< meta publications.talks.resume-subheader >}}
+### {{< meta publications.talks.resume-subheader >}}
 
 ```{python}
 #| label: techreports
