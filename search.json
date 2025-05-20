@@ -14,25 +14,18 @@
     "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
   },
   {
-    "objectID": "resume.html#section-5",
-    "href": "resume.html#section-5",
+    "objectID": "resume.html#section-3",
+    "href": "resume.html#section-3",
     "title": "John Doe, Jr.",
-    "section": "Peer Reviewed",
-    "text": "Peer Reviewed\n\nPaper 1\nPaper 2\nPaper 3"
+    "section": " Awards",
+    "text": "Awards\n\nFellow, International Association of Underwater Basket Weavers"
   },
   {
-    "objectID": "resume.html#section-6",
-    "href": "resume.html#section-6",
+    "objectID": "resume.html#section-4",
+    "href": "resume.html#section-4",
     "title": "John Doe, Jr.",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\n\nProceedings 1\nProceedings 2"
-  },
-  {
-    "objectID": "resume.html#section-7",
-    "href": "resume.html#section-7",
-    "title": "John Doe, Jr.",
-    "section": "Talks and Posters",
-    "text": "Talks and Posters\n\nTech Report 1"
+    "section": " Publications and Presentations",
+    "text": "Publications and Presentations\n\nPeer Reviewed\n\nPaper 1\nPaper 2\nPaper 3\n\n\n\nConference Proceedings\n\nProceedings 1\nProceedings 2\n\n\n\nTalks and Posters\n\nTech Report 1"
   },
   {
     "objectID": "cv.html",
@@ -46,7 +39,7 @@
     "href": "cv.html#section",
     "title": "John Doe, Jr.",
     "section": " Education",
-    "text": "Education\n\n\n\n\n2000\n\n\nB.A., Underwater Basket Weaving, University of Awesomeness, Anylocation, USMinor: SCUBA Diving | Graduated top of my class of 1\n\n\n\n\n2002\n\n\nM.A., Upsidedown Underwater Basket Weaving, University of Awesomeness, Anylocation, US\n\n\n\n\n\nAdditional Higher Education (no degree)\n\n\n\n\n2014\n\n\nYarn making (3 credit hours), University of Awesomeness, Anylocation, US"
+    "text": "Education\n\n\n\n\n2000\n\n\nB.A., Underwater Basket Weaving, University of Awesomeness, Anylocation, USMinor: SCUBA Diving | Graduated top of my class of 1\n\n\n\n\n2002\n\n\nM.A., Upside Down Underwater Basket Weaving, University of Awesomeness, Anylocation, US\n\n\n\n\n\nAdditional Higher Education (no degree)\n\n\n\n\n2014\n\n\nYarn making (3 credit hours), University of Awesomeness, Anylocation, US"
   },
   {
     "objectID": "cv.html#section-2",
@@ -81,7 +74,7 @@
     "href": "cv.html#section-6",
     "title": "John Doe, Jr.",
     "section": " Research Experience",
-    "text": "Research Experience\n\n\n\n\n2029-2023\n\n\nDeveloping ecofriendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
+    "text": "Research Experience\n\n\n\n\n2029-2023\n\n\nDeveloping eco-friendly baskets in underwater environments: combatting biodegradation when weaving baskets underwater"
   },
   {
     "objectID": "cv.html#section-7",
