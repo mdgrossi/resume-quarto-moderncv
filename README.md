@@ -8,6 +8,18 @@ This template can be used to easily create a professional private sector r&#232;
 * [Quarto](https://quarto.org/docs/get-started/) (>= 1.6.42)
 * [Python](https://www.python.org/downloads/) (>= 3.9.6)
 
+Use the provided `requirements.txt` file to install Python dependencies in a virtual environment. For example:
+
+```{bash}
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate
+
+# Install packages
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
 The `pdf` version is a custom and limited Quarto implementation of the LaTeX [moderncv](https://ctan.org/pkg/moderncv) template. The implementation is inspired by and derived from the [modern2-cv](https://github.com/schochastics/modern2-cv) Quarto template by [schochastics](https://github.com/schochastics).
 
 The `html` rendering supports integration with a portfolio website. It is based upon [this quarto-resume](https://github.com/busemorose/resume_quarto) by [busemorose](https://github.com/busemorose), but uses Python instead of R to format the content, mostly due to seemingly endless challenges installing R's flextable package.
