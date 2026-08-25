@@ -56,7 +56,7 @@ jobs:
 
         "$TLMGR" install \
           moderncv fontawesome6 lastpage fancyhdr enumitem \
-          changepage etoolbox hyphenat multicol setspace
+          changepage etoolbox hyphenat setspace
 
     - name: Render and Publish to GitHub Pages
       uses: quarto-dev/quarto-actions/publish@v2
