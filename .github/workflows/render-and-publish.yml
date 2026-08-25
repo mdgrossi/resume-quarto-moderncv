@@ -35,7 +35,20 @@ jobs:
         tinytex: true
         # uncomment below and fill to pin a version
         # version: 0.9.600
-        
+
+    - name: Pre-install LaTeX packages for cv-pdf template
+      # Installs everything cvtemplate.tex needs before the first pdflatex
+      # pass. This avoids a known Quarto/TinyTeX bug where the automatic
+      # tlmgr-install-then-retry loop fails with "Latexmk: Nothing to do"
+      # after installing a missing package (see quarto-dev/quarto-cli
+      # discussion #11858) — pre-installing means the render never needs
+      # to trigger that retry path.
+      run: |
+        TLMGR="$HOME/.TinyTeX/bin/x86_64-linux/tlmgr"
+        "$TLMGR" install \
+          moderncv fontawesome6 lastpage fancyhdr enumitem \
+          changepage etoolbox hyphenat multicol setspace
+
     - name: Render and Publish to GitHub Pages
       uses: quarto-dev/quarto-actions/publish@v2
       with:
