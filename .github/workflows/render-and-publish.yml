@@ -45,6 +45,15 @@ jobs:
       # to trigger that retry path.
       run: |
         TLMGR="$HOME/.TinyTeX/bin/x86_64-linux/tlmgr"
+
+        # A freshly-installed TinyTeX often ships an outdated tlmgr that
+        # refuses to install packages until it updates itself. `tlmgr
+        # update --self` has been known to hang in CI, so bound it with a
+        # timeout and fall back to CTAN's standalone updater script if it
+        # doesn't finish quickly.
+        timeout 120 "$TLMGR" update --self || \
+          curl -sL https://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh | sh -s -- --no-verify-downloads
+
         "$TLMGR" install \
           moderncv fontawesome6 lastpage fancyhdr enumitem \
           changepage etoolbox hyphenat multicol setspace
