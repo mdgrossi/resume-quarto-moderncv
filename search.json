@@ -1,10 +1,24 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "resume.html",
+    "href": "resume.html",
     "title": "John Doe, Jr.",
     "section": "",
-    "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè — for the private sector\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ — for academia\nPreview site\npdf\ndocx\n                   \n\n\n\n\n\nInstructions for using this template can be found in the repo README."
+    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
+  },
+  {
+    "objectID": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206875676569636f6e7320737461722d61776172642d3031203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461206177617264732e726573756d652d686561646572203e7d7d",
+    "href": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206875676569636f6e7320737461722d61776172642d3031203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461206177617264732e726573756d652d686561646572203e7d7d",
+    "title": "John Doe, Jr.",
+    "section": " Awards",
+    "text": "Awards\n\nFellow, International Association of Underwater Basket Weavers"
+  },
+  {
+    "objectID": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206678656d6f6a69206e6577737061706572203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207075626c69636174696f6e732e726573756d652d686561646572203e7d7d",
+    "href": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206678656d6f6a69206e6577737061706572203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207075626c69636174696f6e732e726573756d652d686561646572203e7d7d",
+    "title": "John Doe, Jr.",
+    "section": " Publications and Presentations",
+    "text": "Publications and Presentations\n\nPeer Reviewed\n\nPaper 1\nPaper 2\nPaper 3\n\n\n\nConference Proceedings\n\nProceedings 1\nProceedings 2\n\n\n\nTalks and Posters\n\nTech Report 1"
   },
   {
     "objectID": "cv.html",
@@ -91,24 +105,10 @@
     "text": "Certifications\n\nSCUBA"
   },
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "John Doe, Jr.",
     "section": "",
-    "text": "Email \nWebsite \nGitHub \nLinkedIn \nORCID \nResearchGate"
-  },
-  {
-    "objectID": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206875676569636f6e7320737461722d61776172642d3031203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461206177617264732e726573756d652d686561646572203e7d7d",
-    "href": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206875676569636f6e7320737461722d61776172642d3031203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461206177617264732e726573756d652d686561646572203e7d7d",
-    "title": "John Doe, Jr.",
-    "section": " Awards",
-    "text": "Awards\n\nFellow, International Association of Underwater Basket Weavers"
-  },
-  {
-    "objectID": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206678656d6f6a69206e6577737061706572203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207075626c69636174696f6e732e726573756d652d686561646572203e7d7d",
-    "href": "resume.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206678656d6f6a69206e6577737061706572203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206d657461207075626c69636174696f6e732e726573756d652d686561646572203e7d7d",
-    "title": "John Doe, Jr.",
-    "section": " Publications and Presentations",
-    "text": "Publications and Presentations\n\nPeer Reviewed\n\nPaper 1\nPaper 2\nPaper 3\n\n\n\nConference Proceedings\n\nProceedings 1\nProceedings 2\n\n\n\nTalks and Posters\n\nTech Report 1"
+    "text": "Click any of the following to preview samples of each rèsumè and curriculum vitæ format.\n\n\n\n\n\nWebsite\nPortable Document Format\nMicrosoft Word\n\n\n\n\n\nRèsumè — for the private sector\nPreview site\npdf\ndocx\n\n\n\nCurriculum vitæ — for academia\nPreview site\npdf\ndocx\n                   \n\n\n\n\n\nInstructions for using this template can be found in the repo README."
   }
 ]
