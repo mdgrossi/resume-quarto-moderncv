@@ -41,7 +41,7 @@ with open("_contents.yml", "r") as f:
 
 [Email](mailto:{{< meta contact.email >}}) {{< iconify fxemoji:email >}}
 
-[Website]({{< meta contact.website >}}) {{< iconify streamline:web >}}
+[Website](https://{{< meta contact.website >}}) {{< iconify streamline:web >}}
 
 [GitHub](https://github.com/{{< meta contact.github >}}) {{< iconify mdi:github >}}
 
